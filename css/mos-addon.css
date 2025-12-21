@@ -1,0 +1,533 @@
+/* ========================================
+   MOS専用追加スタイル
+======================================== */
+
+/* バージョンカード */
+.version-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.version-card {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.version-card.current {
+    border-color: #217346;
+    box-shadow: 0 4px 12px rgba(33, 115, 70, 0.2);
+}
+
+.version-card.legacy {
+    opacity: 0.7;
+    background: #f9fafb;
+}
+
+.version-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #217346, #2b5797);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.version-card h4 {
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0.8rem 0;
+    color: var(--text-primary);
+}
+
+.version-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.version-status.ended {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.version-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.version-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.version-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #217346;
+    font-weight: bold;
+}
+
+/* レベルカード */
+.level-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.level-card {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.level-card.associate {
+    border-color: #2b5797;
+}
+
+.level-card.expert {
+    border-color: #d24726;
+}
+
+.level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.level-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.level-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.level-badge.advanced {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.level-desc {
+    color: var(--text-secondary);
+    margin: 1rem 0;
+    line-height: 1.7;
+}
+
+.level-subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.subject-tag {
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* 科目カード */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.subject-card {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card.word {
+    border-top: 4px solid #2b5797;
+}
+
+.subject-card.excel {
+    border-top: 4px solid #217346;
+}
+
+.subject-card.powerpoint {
+    border-top: 4px solid #d24726;
+}
+
+.subject-card.outlook {
+    border-top: 4px solid #0078d4;
+}
+
+.subject-card.access {
+    border-top: 4px solid #a4373a;
+}
+
+.subject-card.expert {
+    border: 3px solid #dc2626;
+}
+
+.subject-header {
+    background: #f9fafb;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subject-icon {
+    font-size: 2.5rem;
+}
+
+.subject-card.word .subject-icon {
+    color: #2b5797;
+}
+
+.subject-card.excel .subject-icon {
+    color: #217346;
+}
+
+.subject-card.powerpoint .subject-icon {
+    color: #d24726;
+}
+
+.subject-card.outlook .subject-icon {
+    color: #0078d4;
+}
+
+.subject-card.access .subject-icon {
+    color: #a4373a;
+}
+
+.subject-header h4 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.difficulty {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.subject-content {
+    padding: 1.5rem;
+}
+
+.subject-content h5 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.subject-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.subject-content ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.subject-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.subject-info {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.info-item i {
+    color: var(--primary-color);
+}
+
+/* 難易度グリッド */
+.difficulty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.difficulty-card {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.difficulty-card.easy {
+    border-color: #10b981;
+}
+
+.difficulty-card.medium {
+    border-color: #f59e0b;
+}
+
+.difficulty-card.hard {
+    border-color: #dc2626;
+}
+
+.difficulty-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.subjects-list .badge {
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.pass-rate {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+/* 勉強時間テーブル */
+.time-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.time-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.time-table th,
+.time-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.time-table thead {
+    background: linear-gradient(135deg, #217346, #2b5797);
+    color: white;
+}
+
+.time-table th {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.time-table td {
+    color: var(--text-secondary);
+}
+
+.time-table td strong {
+    color: var(--text-primary);
+}
+
+.time-table tr:hover {
+    background: #f9fafb;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* 関数カード */
+.function-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.function-card {
+    background: #f9fafb;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.2rem;
+    transition: all 0.3s;
+}
+
+.function-card:hover {
+    background: var(--bg-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.function-card strong {
+    display: block;
+    font-size: 1rem;
+    color: #217346;
+    margin-bottom: 0.5rem;
+}
+
+.function-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.function-card code {
+    display: block;
+    background: #1f2937;
+    color: #10b981;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+/* スコア表示 */
+.score-display-box {
+    background: linear-gradient(135deg, #217346, #2b5797);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+}
+
+.score-large {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.score-number {
+    font-size: 4rem;
+}
+
+.score-total {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.score-note {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+/* フィールドヘッダー（タブ用） */
+.field-header.excel {
+    background: linear-gradient(135deg, #217346, #185c37);
+}
+
+.field-header.word {
+    background: linear-gradient(135deg, #2b5797, #1e3a8a);
+}
+
+.field-header.powerpoint {
+    background: linear-gradient(135deg, #d24726, #991b1b);
+}
+
+.field-header.access {
+    background: linear-gradient(135deg, #a4373a, #7f1d1d);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .version-grid,
+    .subjects-grid,
+    .difficulty-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .level-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .function-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .time-table {
+        font-size: 0.9rem;
+    }
+    
+    .time-table th,
+    .time-table td {
+        padding: 0.8rem;
+    }
+    
+    .score-large {
+        font-size: 2rem;
+    }
+    
+    .score-number {
+        font-size: 2.5rem;
+    }
+}
