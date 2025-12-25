@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本情報技術者試験 完全対策講座【2025年最新版】</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fe.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <a href="index.html" style="color: inherit; text-decoration: none;">
+                        <span>試験対策講座ポータル</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">トップ</a>
+                    <a href="#overview">試験概要</a>
+                    <a href="#scope">出題範囲</a>
+                    <a href="#strategy">攻略法</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずナビゲーション -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> トップ</a>
+            <span class="separator">›</span>
+            <span class="current">基本情報技術者試験 完全対策講座</span>
+        </div>
+    </div>
+
+    <!-- ページヒーロー -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+            <div class="hero-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <h1 class="page-title">基本情報技術者試験 完全対策講座</h1>
+            <p class="page-subtitle">国家資格 | 情報処理推進機構（IPA）認定 | レベル2</p>
+            <p class="hero-description">
+                IT業界で働くために必要な基礎知識とスキルを証明する国家資格。<br>
+                新人エンジニアやIT業界への転職を目指す方に最適な試験です。
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">190分</div>
+                    <div class="stat-label">試験時間</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60点</div>
+                    <div class="stat-label">合格基準</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">約45%</div>
+                    <div class="stat-label">合格率</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 目次ナビゲーション -->
+    <nav class="toc-nav">
+        <div class="container">
+            <button class="toc-toggle" id="toc-toggle">
+                <i class="fas fa-list"></i> 
+                <span>目次</span>
+                <i class="fas fa-chevron-down toc-toggle-icon"></i>
+            </button>
+            <div class="toc-content" id="toc-content">
+                <div class="toc-grid">
+                    <a href="#overview" class="toc-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>試験概要</span>
+                    </a>
+                    <a href="#changes" class="toc-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>制度変更点</span>
+                    </a>
+                    <a href="#scope" class="toc-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>出題範囲</span>
+                    </a>
+                    <a href="#difficulty" class="toc-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>合格率・難易度</span>
+                    </a>
+                    <a href="#time" class="toc-item">
+                        <i class="fas fa-clock"></i>
+                        <span>勉強時間</span>
+                    </a>
+                    <a href="#plan" class="toc-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>学習計画</span>
+                    </a>
+                    <a href="#strategy" class="toc-item">
+                        <i class="fas fa-bullseye"></i>
+                        <span>攻略法</span>
+                    </a>
+                    <a href="#materials" class="toc-item">
+                        <i class="fas fa-book"></i>
+                        <span>おすすめ教材</span>
+                    </a>
+                    <a href="#cbt" class="toc-item">
+                        <i class="fas fa-desktop"></i>
+                        <span>CBT試験</span>
+                    </a>
+                    <a href="#exemption" class="toc-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>科目A免除</span>
+                    </a>
+                    <a href="#quiz" class="toc-item">
+                        <i class="fas fa-pen-alt"></i>
+                        <span>練習問題</span>
+                    </a>
+                    <a href="#study" class="toc-item">
+                        <i class="fas fa-book-reader"></i>
+                        <span>学習方法</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 試験概要セクション -->
+    <section id="overview" class="content-section" data-section-name="試験概要">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-info-circle"></i> 試験概要
+                <button class="bookmark-btn" data-section="overview" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+            
+            <div class="intro-text">
+                <p>
+                    <strong>基本情報技術者試験</strong>は、独立行政法人情報処理推進機構（IPA）が実施する国家資格試験です。
+                    IT業界で働くために必要な基礎知識とスキルを証明する資格として、新人エンジニアやIT業界への転職を目指す方に最適な試験です。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-layer-group"></i> 試験の位置づけ
+            </h3>
+
+            <div class="level-cards">
+                <div class="level-card level-1">
+                    <div class="level-number">レベル1</div>
+                    <h4>ITパスポート試験</h4>
+                    <p>IT基礎知識の入門資格</p>
+                </div>
+                <div class="level-card level-2 current">
+                    <div class="level-badge">本試験</div>
+                    <div class="level-number">レベル2</div>
+                    <h4>基本情報技術者試験</h4>
+                    <p>IT技術者の基礎資格</p>
+                </div>
+                <div class="level-card level-3">
+                    <div class="level-number">レベル3</div>
+                    <h4>応用情報技術者試験</h4>
+                    <p>高度IT人材への第一歩</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-check-circle"></i> 試験の基本情報
+            </h3>
+
+            <div class="info-table-wrapper">
+                <table class="info-table">
+                    <tr>
+                        <th>試験方式</th>
+                        <td>CBT方式（Computer Based Testing）</td>
+                    </tr>
+                    <tr>
+                        <th>実施時期</th>
+                        <td>通年実施（いつでも受験可能）</td>
+                    </tr>
+                    <tr>
+                        <th>受験料</th>
+                        <td>7,500円（税込）</td>
+                    </tr>
+                    <tr>
+                        <th>試験科目</th>
+                        <td>科目A試験（90分）+ 科目B試験（100分）= 合計190分</td>
+                    </tr>
+                    <tr>
+                        <th>受験方法</th>
+                        <td>全国各地のテストセンターでコンピュータを使用して受験</td>
+                    </tr>
+                    <tr>
+                        <th>注意事項</th>
+                        <td><strong>科目A試験と科目B試験は同日連続受験が必須</strong>（別日受験不可）</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-clipboard-list"></i> 試験科目の詳細
+            </h3>
+
+            <div class="subject-grid">
+                <div class="subject-card subject-a">
+                    <div class="subject-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h4>科目A試験（旧午前試験）</h4>
+                    <div class="subject-details">
+                        <div class="detail-row">
+                            <span class="detail-label">試験時間</span>
+                            <span class="detail-value">90分</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">出題形式</span>
+                            <span class="detail-value">多肢選択式（四肢択一）</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">出題数</span>
+                            <span class="detail-value">60問</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">合格基準</span>
+                            <span class="detail-value">600点以上 / 1,000点満点</span>
+                        </div>
+                    </div>
+                    <p class="subject-desc">テクノロジ系・マネジメント系・ストラテジ系の幅広い知識を問う問題</p>
+                </div>
+
+                <div class="subject-card subject-b">
+                    <div class="subject-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>科目B試験（旧午後試験）</h4>
+                    <div class="subject-details">
+                        <div class="detail-row">
+                            <span class="detail-label">試験時間</span>
+                            <span class="detail-value">100分</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">出題形式</span>
+                            <span class="detail-value">多肢選択式</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">出題数</span>
+                            <span class="detail-value">20問</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">合格基準</span>
+                            <span class="detail-value">600点以上 / 1,000点満点</span>
+                        </div>
+                    </div>
+                    <p class="subject-desc">アルゴリズムとプログラミング、情報セキュリティの実践的な問題</p>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>重要ポイント</h4>
+                    <ul>
+                        <li>科目A試験と科目B試験は<strong>両方とも600点以上</strong>で合格</li>
+                        <li>どちらか一方でも基準点に満たない場合は不合格</li>
+                        <li>科目間の休憩時間あり（退室可能）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制度変更点セクション -->
+    <section id="changes" class="content-section alt-bg" data-section-name="制度変更点">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-exchange-alt"></i> 試験制度の変更点（2023年4月〜）
+                <button class="bookmark-btn" data-section="changes" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    2023年4月から基本情報技術者試験は大幅にリニューアルされました。
+                    最新の変更点を理解して、効率的な学習計画を立てましょう。
+                </p>
+            </div>
+
+            <div class="change-comparison">
+                <div class="comparison-card old">
+                    <div class="comparison-header">
+                        <i class="fas fa-history"></i>
+                        <h3>旧制度（〜2023年3月）</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li><strong>午前試験</strong>: 150分、80問</li>
+                        <li><strong>午後試験</strong>: 150分、11問（選択式）</li>
+                        <li>プログラミング言語選択あり（C、Java、Python等）</li>
+                        <li>年2回実施（春期・秋期）</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="comparison-card new">
+                    <div class="comparison-header">
+                        <i class="fas fa-star"></i>
+                        <h3>新制度（2023年4月〜）</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li><strong>科目A試験</strong>: 90分、60問</li>
+                        <li><strong>科目B試験</strong>: 100分、20問（全問必須）</li>
+                        <li>疑似言語に統一（プログラミング言語選択廃止）</li>
+                        <li>通年実施（CBT方式、いつでも受験可能）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-lightbulb"></i> 主な変更ポイント
+            </h3>
+
+            <div class="change-points">
+                <div class="change-point">
+                    <div class="change-icon blue">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>試験時間の短縮</h4>
+                    <p><strong>300分 → 190分</strong></p>
+                    <p class="change-desc">合計110分短縮され、受験者の負担が軽減されました。</p>
+                </div>
+
+                <div class="change-point">
+                    <div class="change-icon green">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h4>出題数の削減</h4>
+                    <p><strong>91問 → 80問</strong></p>
+                    <p class="change-desc">科目A: 80問→60問、科目B: 11問→20問（選択式から全問必須へ）</p>
+                </div>
+
+                <div class="change-point">
+                    <div class="change-icon orange">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>疑似言語への統一</h4>
+                    <p><strong>言語選択廃止</strong></p>
+                    <p class="change-desc">科目B試験はすべて疑似言語での出題。言語選択の必要がなくなりました。</p>
+                </div>
+
+                <div class="change-point">
+                    <div class="change-icon purple">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>通年実施</h4>
+                    <p><strong>年2回 → いつでも受験可能</strong></p>
+                    <p class="change-desc">CBT方式により、自分の都合に合わせて受験日を選択できます。</p>
+                </div>
+            </div>
+
+            <div class="alert-box warning">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>受験者への影響</h4>
+                    <ul>
+                        <li><strong>科目B試験</strong>: 疑似言語の学習が必須となりました</li>
+                        <li><strong>サンプル問題</strong>: IPA公式サイトで新制度のサンプル問題を確認できます</li>
+                        <li><strong>過去問</strong>: 旧制度の午後試験問題は参考程度に活用してください</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 練習問題セクション -->
+    <section id="quiz" class="content-section alt-bg" data-section-name="練習問題">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-pen-square"></i> 練習問題
+                <button class="bookmark-btn" data-section="quiz" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験の科目A試験レベルの練習問題を用意しました。<br>
+                    テクノロジ系、マネジメント系、ストラテジ系の各分野から出題しています。
+                </p>
+            </div>
+
+            <!-- フィルター -->
+            <div class="quiz-filters">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-list"></i> すべて
+                </button>
+                <button class="filter-btn" data-category="基礎理論">
+                    <i class="fas fa-calculator"></i> 基礎理論
+                </button>
+                <button class="filter-btn" data-category="コンピュータシステム">
+                    <i class="fas fa-server"></i> コンピュータシステム
+                </button>
+                <button class="filter-btn" data-category="ネットワーク">
+                    <i class="fas fa-network-wired"></i> ネットワーク
+                </button>
+                <button class="filter-btn" data-category="データベース">
+                    <i class="fas fa-database"></i> データベース
+                </button>
+                <button class="filter-btn" data-category="セキュリティ">
+                    <i class="fas fa-shield-alt"></i> セキュリティ
+                </button>
+                <button class="filter-btn" data-category="マネジメント">
+                    <i class="fas fa-tasks"></i> マネジメント
+                </button>
+                <button class="filter-btn" data-category="ストラテジ">
+                    <i class="fas fa-chess"></i> ストラテジ
+                </button>
+            </div>
+
+            <!-- 統計情報 -->
+            <div class="quiz-stats">
+                <div class="stat-box">
+                    <div class="stat-label">正解数</div>
+                    <div class="stat-value"><span id="correct-count">0</span> 問</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">回答済み</div>
+                    <div class="stat-value"><span id="total-answered">0</span> / 20 問</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">正答率</div>
+                    <div class="stat-value"><span id="accuracy-rate">0%</span></div>
+                </div>
+                <div class="stat-box">
+                    <button id="reset-quiz" class="reset-btn">
+                        <i class="fas fa-redo"></i> リセット
+                    </button>
+                </div>
+            </div>
+
+            <!-- 練習問題リスト -->
+            <div id="quiz-list" class="quiz-list">
+                <!-- 練習問題がJavaScriptで挿入されます -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 出題範囲セクション -->
+    <section id="scope" class="content-section" data-section-name="出題範囲">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-pie"></i> 出題範囲と配点
+                <button class="bookmark-btn" data-section="scope" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験は、テクノロジ系・マネジメント系・ストラテジ系の3分野から出題されます。
+                    各分野の出題比率と重要ポイントを理解しましょう。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-layer-group"></i> 科目A試験の出題分野
+            </h3>
+
+            <div class="scope-grid">
+                <div class="scope-card technology">
+                    <div class="scope-header">
+                        <div class="scope-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>テクノロジ系</h3>
+                        <p class="scope-subtitle">約50問（全体の約83%）</p>
+                    </div>
+                    <div class="scope-content">
+                        <h4>主な出題分野</h4>
+                        <ul>
+                            <li>基礎理論（離散数学、応用数学、情報理論）</li>
+                            <li>コンピュータシステム（ハードウェア、ソフトウェア）</li>
+                            <li>技術要素（ネットワーク、データベース、セキュリティ）</li>
+                            <li>開発技術（システム開発、ソフトウェア開発）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scope-card management">
+                    <div class="scope-header">
+                        <div class="scope-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>マネジメント系</h3>
+                        <p class="scope-subtitle">約6問（全体の約10%）</p>
+                    </div>
+                    <div class="scope-content">
+                        <h4>主な出題分野</h4>
+                        <ul>
+                            <li>プロジェクトマネジメント（PMBOK、スコープ、時間、コスト）</li>
+                            <li>サービスマネジメント（ITIL、SLA、インシデント管理）</li>
+                            <li>システム監査</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scope-card strategy">
+                    <div class="scope-header">
+                        <div class="scope-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>ストラテジ系</h3>
+                        <p class="scope-subtitle">約4問（全体の約7%）</p>
+                    </div>
+                    <div class="scope-content">
+                        <h4>主な出題分野</h4>
+                        <ul>
+                            <li>システム戦略（業務プロセス、ソリューションビジネス）</li>
+                            <li>経営戦略（経営戦略手法、マーケティング、ビジネス戦略）</li>
+                            <li>企業と法務（企業活動、法務、標準化）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-code"></i> 科目B試験の出題分野
+            </h3>
+
+            <div class="subject-b-content">
+                <div class="subject-b-card">
+                    <div class="subject-b-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>アルゴリズムとプログラミング</h4>
+                        <span class="question-count">16問</span>
+                    </div>
+                    <div class="subject-b-body">
+                        <p><strong>疑似言語</strong>を使用したアルゴリズムの理解と実装能力を問う問題</p>
+                        <ul>
+                            <li>データ構造（配列、リスト、スタック、キュー、木構造）</li>
+                            <li>探索アルゴリズム（線形探索、二分探索）</li>
+                            <li>整列アルゴリズム（バブルソート、クイックソート等）</li>
+                            <li>再帰処理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subject-b-card">
+                    <div class="subject-b-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>情報セキュリティ</h4>
+                        <span class="question-count">4問</span>
+                    </div>
+                    <div class="subject-b-body">
+                        <p>実践的なセキュリティ対策と脅威への対応能力を問う問題</p>
+                        <ul>
+                            <li>暗号化技術（共通鍵暗号、公開鍵暗号）</li>
+                            <li>認証技術（パスワード、生体認証、多要素認証）</li>
+                            <li>ネットワークセキュリティ（ファイアウォール、IDS/IPS）</li>
+                            <li>脆弱性対策（SQLインジェクション、XSS等）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合格率・難易度セクション -->
+    <section id="difficulty" class="content-section alt-bg" data-section-name="合格率・難易度">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i> 合格率と難易度
+                <button class="bookmark-btn" data-section="difficulty" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験の合格率は約40〜50%前後で推移しています。
+                    適切な学習計画と対策により、十分に合格可能な試験です。
+                </p>
+            </div>
+
+            <div class="stats-display">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">約45%</div>
+                    <div class="stat-label">平均合格率</div>
+                    <p class="stat-desc">2023年度の合格率（新制度）</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">★★★☆☆</div>
+                    <div class="stat-label">難易度</div>
+                    <p class="stat-desc">中級レベル（レベル2）</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">200時間</div>
+                    <div class="stat-label">推奨学習時間</div>
+                    <p class="stat-desc">IT初心者の場合</p>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>合格のポイント</h4>
+                    <ul>
+                        <li><strong>科目A</strong>: 過去問を繰り返し解いて知識を定着させる</li>
+                        <li><strong>科目B</strong>: 疑似言語とアルゴリズムの理解を深める</li>
+                        <li><strong>両科目</strong>: 600点以上の獲得が必須（どちらも）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 勉強時間セクション -->
+    <section id="time" class="content-section" data-section-name="勉強時間">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i> 必要な勉強時間の目安
+                <button class="bookmark-btn" data-section="time" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    学習に必要な時間は、現在のスキルレベルによって大きく異なります。
+                    自分のレベルに合わせた学習計画を立てましょう。
+                </p>
+            </div>
+
+            <div class="time-cards">
+                <div class="time-card beginner">
+                    <div class="time-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h4>IT初心者</h4>
+                    <div class="time-hours">200時間</div>
+                    <div class="time-period">3〜6ヶ月</div>
+                    <ul class="time-list">
+                        <li>IT関連の知識がほとんどない</li>
+                        <li>プログラミング未経験</li>
+                        <li>基礎から丁寧に学習が必要</li>
+                    </ul>
+                </div>
+
+                <div class="time-card intermediate">
+                    <div class="time-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>基礎知識あり</h4>
+                    <div class="time-hours">100〜150時間</div>
+                    <div class="time-period">2〜3ヶ月</div>
+                    <ul class="time-list">
+                        <li>ITパスポート取得済み</li>
+                        <li>情報系の学生</li>
+                        <li>基本的な用語は理解している</li>
+                    </ul>
+                </div>
+
+                <div class="time-card advanced">
+                    <div class="time-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>実務経験者</h4>
+                    <div class="time-hours">50〜100時間</div>
+                    <div class="time-period">1〜2ヶ月</div>
+                    <ul class="time-list">
+                        <li>IT企業での実務経験あり</li>
+                        <li>プログラミング経験あり</li>
+                        <li>試験対策に集中できる</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学習計画セクション -->
+    <section id="plan" class="content-section alt-bg" data-section-name="学習計画">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-calendar-alt"></i> 学習計画とスケジュール
+                <button class="bookmark-btn" data-section="plan" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    効率的な学習には、計画的なスケジュール管理が重要です。
+                    自分の状況に合わせた学習プランを選択しましょう。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-calendar-check"></i> 3ヶ月プラン（推奨）
+            </h3>
+
+            <div class="plan-timeline">
+                <div class="plan-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">第1ヶ月</span>
+                        <h4>基礎固め</h4>
+                        <span class="phase-hours">約60時間</span>
+                    </div>
+                    <div class="phase-content">
+                        <div class="week-plan">
+                            <strong>Week 1-2:</strong> テクノロジ系（コンピュータシステム）
+                            <ul>
+                                <li>CPU・メモリの動作原理</li>
+                                <li>システム構成と稼働率計算</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 3:</strong> テクノロジ系（ネットワーク・セキュリティ）
+                            <ul>
+                                <li>TCP/IPプロトコル</li>
+                                <li>暗号化技術とセキュリティ対策</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 4:</strong> マネジメント系・ストラテジ系
+                            <ul>
+                                <li>プロジェクトマネジメント</li>
+                                <li>経営戦略と法務</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">第2ヶ月</span>
+                        <h4>応用力養成</h4>
+                        <span class="phase-hours">約60時間</span>
+                    </div>
+                    <div class="phase-content">
+                        <div class="week-plan">
+                            <strong>Week 5-6:</strong> アルゴリズム・プログラミング基礎
+                            <ul>
+                                <li>疑似言語の文法理解</li>
+                                <li>基本的なアルゴリズムの学習</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 7:</strong> アルゴリズム・プログラミング応用
+                            <ul>
+                                <li>探索・整列アルゴリズム</li>
+                                <li>データ構造の理解</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 8:</strong> 科目A過去問演習
+                            <ul>
+                                <li>過去問を繰り返し解く</li>
+                                <li>弱点分野の洗い出し</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-phase">
+                    <div class="phase-header">
+                        <span class="phase-number">第3ヶ月</span>
+                        <h4>総仕上げ</h4>
+                        <span class="phase-hours">約60時間</span>
+                    </div>
+                    <div class="phase-content">
+                        <div class="week-plan">
+                            <strong>Week 9-10:</strong> 科目B過去問演習
+                            <ul>
+                                <li>擬似言語問題に慣れる</li>
+                                <li>トレース練習</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 11:</strong> 苦手分野の克服
+                            <ul>
+                                <li>弱点分野の集中学習</li>
+                                <li>重要公式の暗記</li>
+                            </ul>
+                        </div>
+                        <div class="week-plan">
+                            <strong>Week 12:</strong> 模擬試験・最終確認
+                            <ul>
+                                <li>本番を想定した模擬試験</li>
+                                <li>時間配分の練習</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-bolt"></i> 2ヶ月プラン（短期集中）
+            </h3>
+
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h4>第1ヶ月: 集中学習</h4>
+                    <div class="plan-hours-badge">約90時間</div>
+                    <ul class="plan-list">
+                        <li><strong>Week 1-2:</strong> テクノロジ系全般</li>
+                        <li><strong>Week 3:</strong> マネジメント系・ストラテジ系</li>
+                        <li><strong>Week 4:</strong> アルゴリズム・プログラミング</li>
+                    </ul>
+                    <div class="daily-time">1日3時間 × 週7日</div>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h4>第2ヶ月: 実践演習</h4>
+                    <div class="plan-hours-badge">約90時間</div>
+                    <ul class="plan-list">
+                        <li><strong>Week 5-6:</strong> 科目A・B過去問演習</li>
+                        <li><strong>Week 7:</strong> 苦手分野の補強</li>
+                        <li><strong>Week 8:</strong> 模擬試験・最終調整</li>
+                    </ul>
+                    <div class="daily-time">1日3時間 × 週7日</div>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>学習計画のポイント</h4>
+                    <ul>
+                        <li><strong>無理のないペース:</strong> 1日の学習時間は自分の生活スタイルに合わせて調整</li>
+                        <li><strong>定期的な復習:</strong> 週に1回は前週の内容を復習する時間を設ける</li>
+                        <li><strong>早めの過去問:</strong> 基礎学習と並行して過去問に触れることで出題傾向を把握</li>
+                        <li><strong>科目Bを重視:</strong> 科目Bの対策に全体の40%以上の時間を割く</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 攻略法セクション -->
+    <section id="strategy" class="content-section" data-section-name="攻略法">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i> 分野別攻略法
+                <button class="bookmark-btn" data-section="strategy" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験の合格には、科目A試験と科目B試験、それぞれに適した学習戦略が必要です。
+                    効率的な学習方法をマスターしましょう。
+                </p>
+            </div>
+
+            <div class="strategy-cards">
+                <div class="strategy-card">
+                    <div class="strategy-number">1</div>
+                    <h4>科目A試験の攻略</h4>
+                    <p>過去問の繰り返し学習が最も効果的です。</p>
+                    <ul>
+                        <li>過去問を最低3回繰り返す</li>
+                        <li>間違えた問題は解説を読んで理解</li>
+                        <li>テクノロジ系を重点的に学習</li>
+                        <li>計算問題は公式を暗記</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">2</div>
+                    <h4>科目B試験の攻略</h4>
+                    <p>疑似言語とアルゴリズムの理解が鍵です。</p>
+                    <ul>
+                        <li>疑似言語の文法を完全に理解</li>
+                        <li>基本的なアルゴリズムを実装できる</li>
+                        <li>トレース（処理の追跡）の練習</li>
+                        <li>サンプル問題を繰り返し解く</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">3</div>
+                    <h4>効率的な学習順序</h4>
+                    <p>基礎から応用へ、段階的に学習を進めます。</p>
+                    <ul>
+                        <li>科目Aの基礎知識を固める</li>
+                        <li>並行して疑似言語の学習を開始</li>
+                        <li>アルゴリズムの理解を深める</li>
+                        <li>模擬試験で実力を確認</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-number">4</div>
+                    <h4>試験直前の対策</h4>
+                    <p>本番を想定した総合的な準備を行います。</p>
+                    <ul>
+                        <li>模擬試験を時間内に解く練習</li>
+                        <li>弱点分野の集中復習</li>
+                        <li>重要公式・用語の最終確認</li>
+                        <li>CBT操作に慣れておく</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- おすすめ教材セクション -->
+    <section id="materials" class="content-section" data-section-name="おすすめ教材">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-book"></i> おすすめ教材
+                <button class="bookmark-btn" data-section="materials" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験の学習に役立つ教材をご紹介します。
+                    自分の学習スタイルに合った教材を選びましょう。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-book-open"></i> 参考書・問題集
+            </h3>
+
+            <div class="material-cards">
+                <div class="material-card official">
+                    <div class="material-header">
+                        <i class="fas fa-certificate"></i>
+                        <h4>キタミ式イラストIT塾 基本情報技術者</h4>
+                    </div>
+                    <p class="material-description">
+                        イラストと図解が豊富で、初心者にも分かりやすい定番テキスト。
+                        科目A試験の幅広い知識をカバーしています。
+                    </p>
+                    <div class="material-features">
+                        <span class="feature-tag">初心者向け</span>
+                        <span class="feature-tag">図解豊富</span>
+                        <span class="feature-tag">科目A対策</span>
+                    </div>
+                </div>
+
+                <div class="material-card official">
+                    <div class="material-header">
+                        <i class="fas fa-book"></i>
+                        <h4>基本情報技術者 パーフェクトラーニング過去問題集</h4>
+                    </div>
+                    <p class="material-description">
+                        過去問題を豊富に収録した問題集。詳しい解説付きで、
+                        実践的な学習ができます。
+                    </p>
+                    <div class="material-features">
+                        <span class="feature-tag">過去問</span>
+                        <span class="feature-tag">詳細解説</span>
+                        <span class="feature-tag">実践的</span>
+                    </div>
+                </div>
+
+                <div class="material-card official">
+                    <div class="material-header">
+                        <i class="fas fa-code"></i>
+                        <h4>うかる! 基本情報技術者 科目B</h4>
+                    </div>
+                    <p class="material-description">
+                        科目B試験に特化した対策本。疑似言語とアルゴリズムを
+                        基礎から丁寧に解説しています。
+                    </p>
+                    <div class="material-features">
+                        <span class="feature-tag">科目B特化</span>
+                        <span class="feature-tag">疑似言語</span>
+                        <span class="feature-tag">アルゴリズム</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-globe"></i> Webサイト・アプリ
+            </h3>
+
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h4>IPA公式サイト</h4>
+                        <p>試験概要、サンプル問題、シラバスなどの公式情報</p>
+                        <a href="https://www.ipa.go.jp/shiken/kubun/fe.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i> https://www.ipa.go.jp/shiken/kubun/fe.html
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h4>基本情報技術者試験ドットコム</h4>
+                        <p>過去問題を無料で解ける学習サイト。詳しい解説付き</p>
+                        <a href="https://www.fe-siken.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i> https://www.fe-siken.com/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CBT試験セクション -->
+    <section id="cbt" class="content-section alt-bg" data-section-name="CBT試験">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-desktop"></i> CBT試験の受験方法
+                <button class="bookmark-btn" data-section="cbt" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験はCBT（Computer Based Testing）方式で実施されます。
+                    テストセンターでの受験の流れを理解しておきましょう。
+                </p>
+            </div>
+
+            <div class="cbt-steps">
+                <div class="cbt-step">
+                    <div class="step-number">STEP 1</div>
+                    <h4>受験申込</h4>
+                    <p>プロメトリック社のWebサイトから受験の申込を行います</p>
+                </div>
+                <div class="cbt-step">
+                    <div class="step-number">STEP 2</div>
+                    <h4>受験日時・会場選択</h4>
+                    <p>全国のテストセンターから、都合の良い日時と会場を選択</p>
+                </div>
+                <div class="cbt-step">
+                    <div class="step-number">STEP 3</div>
+                    <h4>受験料支払い</h4>
+                    <p>クレジットカードまたはバウチャーで受験料を支払い</p>
+                </div>
+                <div class="cbt-step">
+                    <div class="step-number">STEP 4</div>
+                    <h4>受験当日</h4>
+                    <p>本人確認書類を持参し、テストセンターで受験</p>
+                </div>
+            </div>
+
+            <div class="alert-box warning">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>持ち物と注意事項</h4>
+                    <ul>
+                        <li><strong>必須</strong>: 本人確認書類（運転免許証、マイナンバーカード等）</li>
+                        <li><strong>禁止</strong>: 筆記用具、電卓、スマートフォン等の持ち込み</li>
+                        <li><strong>注意</strong>: メモ用紙とペンは会場で貸与されます</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科目A免除制度セクション -->
+    <section id="exemption" class="content-section" data-section-name="科目A免除">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-certificate"></i> 科目A免除制度
+                <button class="bookmark-btn" data-section="exemption" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    認定された講座を修了することで、科目A試験が免除される制度があります。
+                    科目B試験に集中して学習できるメリットがあります。
+                </p>
+            </div>
+
+            <div class="exemption-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>科目A試験が免除</h4>
+                    <p>修了認定を受けると科目A試験が1年間免除されます</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h4>科目Bに集中</h4>
+                    <p>科目B試験のみの受験で合格を目指せます</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>有効期間1年</h4>
+                    <p>修了認定から1年以内であれば何度でも受験可能</p>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>認定講座について</h4>
+                    <p>
+                        IPA認定の「修了試験（科目A試験免除試験）」に合格する必要があります。
+                        認定講座の一覧は<a href="https://www.ipa.go.jp/shiken/kubun/fe/honnin_kakunin.html" target="_blank" rel="noopener noreferrer">IPA公式サイト</a>で確認できます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学習方法セクション -->
+    <section id="study" class="content-section" data-section-name="学習方法">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i> 効果的な学習方法
+                <button class="bookmark-btn" data-section="study" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    基本情報技術者試験の合格には、効率的な学習方法が不可欠です。
+                    科目A試験と科目B試験それぞれに適した学習アプローチを理解しましょう。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-book-reader"></i> 科目A試験の学習方法
+            </h3>
+
+            <div class="method-cards">
+                <div class="method-card">
+                    <div class="method-number">1</div>
+                    <h4>過去問中心の学習</h4>
+                    <p>科目A試験は過去問からの出題が多いため、過去問を繰り返し解くことが最も効果的です。</p>
+                    <ul>
+                        <li>最低でも3周は繰り返す</li>
+                        <li>間違えた問題は解説を熟読</li>
+                        <li>類似問題をまとめて学習</li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">2</div>
+                    <h4>分野別の集中学習</h4>
+                    <p>テクノロジ系が約70%を占めるため、この分野に重点を置きます。</p>
+                    <ul>
+                        <li>コンピュータシステム: 計算問題を重点的に</li>
+                        <li>ネットワーク: プロトコルとIPアドレス計算</li>
+                        <li>セキュリティ: 暗号化技術と脅威対策</li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">3</div>
+                    <h4>重要公式の暗記</h4>
+                    <p>頻出の計算公式は確実に暗記しておきましょう。</p>
+                    <ul>
+                        <li>稼働率の計算（直列・並列）</li>
+                        <li>実効アクセス時間</li>
+                        <li>MIPS値の計算</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-code"></i> 科目B試験の学習方法
+            </h3>
+
+            <div class="method-cards">
+                <div class="method-card">
+                    <div class="method-number">1</div>
+                    <h4>疑似言語の文法理解</h4>
+                    <p>疑似言語（DNCL）の文法を完全に理解することが第一歩です。</p>
+                    <ul>
+                        <li>変数の宣言と代入</li>
+                        <li>条件分岐（if文）</li>
+                        <li>繰り返し（while、for文）</li>
+                        <li>配列の操作</li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">2</div>
+                    <h4>アルゴリズムの理解</h4>
+                    <p>基本的なアルゴリズムの動作原理を理解します。</p>
+                    <ul>
+                        <li>線形探索と二分探索</li>
+                        <li>バブルソートとクイックソート</li>
+                        <li>スタックとキュー</li>
+                        <li>再帰処理</li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-number">3</div>
+                    <h4>トレース練習</h4>
+                    <p>プログラムの実行過程を追跡する練習を繰り返します。</p>
+                    <ul>
+                        <li>変数の値の変化を追跡</li>
+                        <li>ループの実行回数を数える</li>
+                        <li>条件分岐の動作を確認</li>
+                        <li>紙とペンで手書き練習</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line"></i> 学習の進め方
+            </h3>
+
+            <div class="study-flow">
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>STEP 1: 基礎知識のインプット</h4>
+                    <p>参考書を1周読み、全体像を把握します。完璧に理解しようとせず、まずは一通り目を通すことを優先します。</p>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h4>STEP 2: 問題演習でアウトプット</h4>
+                    <p>過去問や練習問題を解きながら、知識を定着させます。間違えた問題は必ず解説を読み、理解を深めます。</p>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h4>STEP 3: 反復学習</h4>
+                    <p>過去問を繰り返し解き、正答率を上げていきます。3周目には80%以上の正答率を目指します。</p>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h4>STEP 4: 模擬試験</h4>
+                    <p>本番と同じ時間配分で模擬試験を実施します。時間管理能力と集中力を養います。</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-lightbulb"></i> 学習のコツ
+            </h3>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>スキマ時間の活用</h4>
+                    <p>通勤・通学時間や昼休みに、スマホアプリで過去問を解きましょう。1日30分の積み重ねが大きな差になります。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h4>ノート作りより問題演習</h4>
+                    <p>綺麗なノートを作る時間があれば、その時間で問題を解きましょう。アウトプット重視の学習が効果的です。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>学習仲間を作る</h4>
+                    <p>SNSやオンラインコミュニティで学習仲間を見つけ、情報交換やモチベーション維持に役立てましょう。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h4>定期的な復習</h4>
+                    <p>エビングハウスの忘却曲線を意識し、学習直後、翌日、1週間後、試験前のタイミングで復習します。</p>
+                </div>
+            </div>
+
+            <div class="alert-box warning">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>避けるべき学習方法</h4>
+                    <ul>
+                        <li><strong>インプットのみに偏る:</strong> 読むだけでは知識は定着しません。必ず問題演習を行いましょう。</li>
+                        <li><strong>完璧主義:</strong> 100%理解してから次に進もうとすると時間が足りません。70%理解したら次へ進みましょう。</li>
+                        <li><strong>直前の一夜漬け:</strong> 範囲が広いため、直前の詰め込みでは対応できません。計画的な学習が必要です。</li>
+                        <li><strong>科目Bの軽視:</strong> 科目Bは対策に時間がかかります。早めに着手しましょう。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>試験対策講座ポータル</span>
+                </div>
+                <p class="footer-text">
+                    基本情報技術者試験の合格を目指すすべての方を応援します
+                </p>
+                <div class="footer-links">
+                    <a href="https://www.ipa.go.jp/shiken/kubun/fe.html" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> IPA公式サイト
+                    </a>
+                </div>
+                <p class="copyright">
+                    &copy; 2025 試験対策講座ポータル. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 学習進捗管理パネル -->
+    <div id="progress-panel" class="progress-panel">
+        <button id="progress-toggle" class="progress-toggle">
+            <i class="fas fa-chart-line"></i>
+            <span>学習進捗</span>
+        </button>
+        <div id="progress-content" class="progress-content">
+            <h3><i class="fas fa-chart-pie"></i> 学習進捗</h3>
+            
+            <!-- 全体進捗 -->
+            <div class="progress-section">
+                <h4>全体の進捗</h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overall-progress">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text" id="overall-progress-text">0%</span>
+                </div>
+            </div>
+            
+            <!-- セクション別進捗 -->
+            <div class="progress-section">
+                <h4>セクション別</h4>
+                <div class="section-progress-list" id="section-progress-list">
+                    <!-- JavaScriptで動的に生成 -->
+                </div>
+            </div>
+            
+            <!-- 練習問題進捗 -->
+            <div class="progress-section">
+                <h4>練習問題</h4>
+                <div class="quiz-progress">
+                    <div class="quiz-stat">
+                        <span class="stat-label">正解数</span>
+                        <span class="stat-value" id="quiz-correct">0</span>
+                    </div>
+                    <div class="quiz-stat">
+                        <span class="stat-label">回答数</span>
+                        <span class="stat-value" id="quiz-answered">0</span>
+                    </div>
+                    <div class="quiz-stat">
+                        <span class="stat-label">正答率</span>
+                        <span class="stat-value" id="quiz-rate">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 学習時間 -->
+            <div class="progress-section">
+                <h4>学習時間</h4>
+                <div class="study-time">
+                    <i class="fas fa-clock"></i>
+                    <span id="study-time-display">0分</span>
+                </div>
+                <button id="reset-progress-btn" class="btn-sm-reset">
+                    <i class="fas fa-undo"></i> 進捗をリセット
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ブックマークパネル -->
+    <div id="bookmark-panel" class="bookmark-panel">
+        <button id="bookmark-toggle" class="bookmark-toggle">
+            <i class="fas fa-bookmark"></i>
+            <span>ブックマーク</span>
+        </button>
+        <div id="bookmark-content" class="bookmark-content">
+            <h3><i class="fas fa-bookmark"></i> ブックマーク</h3>
+            <p class="bookmark-hint">各セクションのブックマークアイコンをクリックして保存できます</p>
+            <div id="bookmark-list" class="bookmark-list">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+            <button id="clear-bookmarks-btn" class="btn-sm-reset">
+                <i class="fas fa-trash"></i> すべて削除
+            </button>
+        </div>
+    </div>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="page-top-btn" class="page-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/common.js"></script>
+    <script src="js/fe.js"></script>
+    <script src="js/fe-quiz.js"></script>
+    <script src="js/fe-progress.js"></script>
+</body>
+</html>

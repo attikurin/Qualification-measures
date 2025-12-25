@@ -1,0 +1,2559 @@
+/* ========================================
+   基本情報技術者試験講座専用スタイル
+======================================== */
+
+/* ========================================
+   練習問題スタイル
+======================================== */
+.quiz-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.quiz-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.reset-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.reset-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.quiz-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quiz-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.quiz-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.quiz-category.technology {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.quiz-category.management {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.quiz-category.strategy {
+    background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+.quiz-number {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.quiz-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-option-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.05);
+    transform: translateX(5px);
+}
+
+.quiz-option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.quiz-option-btn.correct {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.quiz-option-btn.incorrect {
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.option-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    background: var(--border-color);
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.quiz-option-btn.correct .option-letter {
+    background: #10b981;
+    color: white;
+}
+
+.quiz-option-btn.incorrect .option-letter {
+    background: #dc2626;
+    color: white;
+}
+
+.option-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    display: block;
+    word-wrap: break-word;
+}
+
+.quiz-feedback {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.quiz-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 2px solid #10b981;
+}
+
+.quiz-feedback.incorrect {
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid #dc2626;
+}
+
+.feedback-result {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.feedback-result i {
+    font-size: 1.3rem;
+}
+
+.quiz-feedback.correct .feedback-result {
+    color: #10b981;
+}
+
+.quiz-feedback.incorrect .feedback-result {
+    color: #dc2626;
+}
+
+.feedback-answer,
+.feedback-explanation {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.feedback-answer strong,
+.feedback-explanation strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ========================================
+   学習計画スタイル
+======================================== */
+.plan-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.plan-phase {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.phase-number {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.phase-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    flex: 1;
+}
+
+.phase-hours {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.phase-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.week-plan {
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+.week-plan strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.week-plan ul {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+}
+
+.week-plan li {
+    color: var(--text-secondary);
+    margin: 0.3rem 0;
+}
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plan-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.plan-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.plan-hours-badge {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.plan-list li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.plan-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.daily-time {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* ========================================
+   学習方法スタイル
+======================================== */
+.method-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.method-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.method-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.method-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0;
+}
+
+.method-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.method-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.method-card ul li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.method-card ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.study-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0;
+}
+
+.flow-step {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.step-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.flow-step h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.flow-step p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.flow-arrow {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--primary-color);
+}
+
+.flow-arrow i {
+    font-size: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tip-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(29, 78, 216, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tip-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.tip-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.tip-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ========================================
+   パンくずナビゲーション
+======================================== */
+.breadcrumb {
+    background: var(--bg-white);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    margin: 0 0.5rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumb .current {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ========================================
+   ページヒーロー
+======================================== */
+.page-hero {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 3rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* ========================================
+   目次ナビゲーション
+======================================== */
+.toc-nav {
+    position: sticky;
+    top: 70px;
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--border-color);
+    z-index: 999;
+    box-shadow: var(--shadow-sm);
+}
+
+.toc-toggle {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--bg-white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.toc-toggle:hover {
+    background: var(--bg-light);
+}
+
+.toggle-icon {
+    transition: transform 0.3s;
+}
+
+.toc-nav.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 2rem;
+}
+
+.toc-nav.expanded .toc-content {
+    max-height: 300px;
+    padding: 1.5rem 2rem;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.2rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.toc-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.toc-item.active {
+    border-color: var(--primary-color);
+    background: var(--bg-white);
+    color: var(--primary-color);
+}
+
+.toc-item i {
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   コンテンツセクション
+======================================== */
+.content-section {
+    padding: 4rem 0;
+}
+
+.content-section.alt-bg {
+    background: var(--bg-light);
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.intro-text p {
+    margin-bottom: 1.2rem;
+}
+
+.intro-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem;
+    color: var(--text-primary);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1.2rem;
+    letter-spacing: -0.01em;
+}
+
+.subsection-title i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* ========================================
+   レベルカード（試験の位置づけ）
+======================================== */
+.level-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.level-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.level-card.current {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.level-number {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    color: #4b5563;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.level-card.level-2 .level-number {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.level-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.level-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.level-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   情報テーブル
+======================================== */
+.info-table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.info-table th,
+.info-table td {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-table th {
+    background: var(--bg-light);
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 180px;
+}
+
+.info-table td {
+    color: var(--text-secondary);
+}
+
+.info-table td strong {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+   試験科目カード
+======================================== */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.subject-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid;
+    transition: all 0.3s;
+}
+
+.subject-card.subject-a {
+    border-top-color: #3b82f6;
+}
+
+.subject-card.subject-b {
+    border-top-color: #10b981;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.subject-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.subject-card.subject-a .subject-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.subject-card.subject-b .subject-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.subject-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.subject-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.subject-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   アラートボックス
+======================================== */
+.alert-box {
+    display: flex;
+    gap: 15px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+}
+
+.alert-box.info {
+    background: #dbeafe;
+    border-left-color: #3b82f6;
+}
+
+.alert-box.warning {
+    background: #fef3c7;
+    border-left-color: #f59e0b;
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.alert-box.info .alert-icon {
+    color: #3b82f6;
+}
+
+.alert-box.warning .alert-icon {
+    color: #f59e0b;
+}
+
+.alert-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.alert-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.alert-content ul li {
+    padding: 0.4rem 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.alert-content ul li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.alert-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert-content a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   制度変更比較
+======================================== */
+.change-comparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0 3rem;
+}
+
+.comparison-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--border-color);
+}
+
+.comparison-card.old {
+    border-color: #9ca3af;
+}
+
+.comparison-card.new {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.comparison-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.comparison-header i {
+    font-size: 1.5rem;
+}
+
+.comparison-card.old .comparison-header i {
+    color: #9ca3af;
+}
+
+.comparison-card.new .comparison-header i {
+    color: #10b981;
+}
+
+.comparison-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.comparison-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.comparison-list li {
+    padding: 0.8rem 0 0.8rem 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.comparison-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.comparison-card.old .comparison-list li::before {
+    color: #9ca3af;
+}
+
+.comparison-card.new .comparison-list li::before {
+    color: #10b981;
+}
+
+.comparison-arrow {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* ========================================
+   変更ポイント
+======================================== */
+.change-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.change-point {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.change-point:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.change-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.change-icon.blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.change-icon.green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.change-icon.orange {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.change-icon.purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.change-point h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.change-point p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.change-desc {
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.6;
+}
+
+/* ========================================
+   出題範囲カード
+======================================== */
+.scope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.scope-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+    border-top: 4px solid;
+}
+
+.scope-card.technology {
+    border-top-color: #3b82f6;
+}
+
+.scope-card.management {
+    border-top-color: #10b981;
+}
+
+.scope-card.strategy {
+    border-top-color: #f59e0b;
+}
+
+.scope-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.scope-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.scope-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.scope-card.technology .scope-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.scope-card.management .scope-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.scope-card.strategy .scope-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.scope-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.scope-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.scope-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.scope-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.scope-content ul li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.scope-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ========================================
+   科目B試験コンテンツ
+======================================== */
+.subject-b-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.subject-b-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.subject-b-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.subject-b-header {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subject-b-header i {
+    font-size: 1.5rem;
+}
+
+.subject-b-header h4 {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.question-count {
+    padding: 0.4rem 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.subject-b-body {
+    padding: 2rem;
+}
+
+.subject-b-body p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.subject-b-body p strong {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.subject-b-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.subject-b-body ul li {
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.subject-b-body ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   統計表示
+======================================== */
+.stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.stat-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .stat-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.stat-card .stat-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   勉強時間カード
+======================================== */
+.time-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.time-card {
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s;
+    border-top: 5px solid;
+}
+
+.time-card.beginner {
+    border-top-color: #ef4444;
+}
+
+.time-card.intermediate {
+    border-top-color: #f59e0b;
+}
+
+.time-card.advanced {
+    border-top-color: #10b981;
+}
+
+.time-card:hover {
+    transform: translateY(-5px);
+}
+
+.time-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.time-card.beginner .time-icon {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.time-card.intermediate .time-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.time-card.advanced .time-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.time-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.time-hours {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.time-period {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.time-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.time-list li {
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.time-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ========================================
+   攻略法カード
+======================================== */
+.strategy-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.strategy-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.strategy-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.strategy-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.strategy-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.strategy-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.strategy-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.strategy-card ul li {
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.strategy-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   教材カード
+======================================== */
+.material-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.material-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.material-card.official {
+    border-color: #3b82f6;
+}
+
+.material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.material-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.material-header i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+}
+
+.material-header h4 {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.material-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.material-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    padding: 0.4rem 1rem;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   リソースリスト
+======================================== */
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.resource-item {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s;
+}
+
+.resource-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.resource-content {
+    flex: 1;
+}
+
+.resource-content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.resource-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.resource-link:hover {
+    background: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+.resource-link i {
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   CBTステップ
+======================================== */
+.cbt-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.cbt-step {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.cbt-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.cbt-step h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cbt-step p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   免除制度
+======================================== */
+.exemption-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.benefit-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   セクションタイトル
+======================================== */
+.content-section .section-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.section-title i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.bookmark-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bookmark-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.bookmark-btn.bookmarked {
+    border-color: #f59e0b;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.bookmark-btn.bookmarked i {
+    font-weight: 900;
+}
+
+/* ========================================
+   レスポンシブデザイン
+======================================== */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.05rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .toc-nav {
+        top: 60px;
+    }
+
+    .toc-toggle {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .toc-nav.expanded .toc-content {
+        max-height: 400px;
+        padding: 1rem 1.5rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .change-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+        padding: 1rem 0;
+    }
+
+    .scope-grid,
+    .time-cards,
+    .strategy-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .level-cards,
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subsection-title {
+        font-size: 1.35rem;
+    }
+}
+
+/* ========================================
+   ブックマークボタン
+======================================== */
+.bookmark-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px 10px;
+}
+
+.bookmark-btn:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.bookmark-btn.bookmarked i {
+    color: var(--accent-color);
+}
+
+.bookmark-btn.bookmarked i::before {
+    content: "\f02e"; /* fas fa-bookmark (filled) */
+}
+
+/* ========================================
+   学習進捗管理パネル
+======================================== */
+.progress-panel {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(320px);
+    width: 350px;
+    background: var(--bg-white);
+    border-radius: 16px 0 0 16px;
+    box-shadow: var(--shadow-xl);
+    z-index: 999;
+    transition: transform 0.3s;
+}
+
+.progress-panel.open {
+    transform: translateY(-50%) translateX(0);
+}
+
+.progress-toggle {
+    position: absolute;
+    left: -50px;
+    top: 20px;
+    width: 50px;
+    height: 100px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    box-shadow: var(--shadow-md);
+    transition: background 0.3s;
+}
+
+.progress-toggle:hover {
+    background: var(--primary-dark);
+}
+
+.progress-toggle i {
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+}
+
+.progress-content {
+    padding: 2rem 1.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.progress-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-content h3 i {
+    color: var(--primary-color);
+}
+
+.progress-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.progress-section:last-child {
+    border-bottom: none;
+}
+
+.progress-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 20px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 40px;
+}
+
+.section-progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.section-progress-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-progress-item i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.section-name {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.section-status {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-status.completed {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.section-status.completed i {
+    font-size: 0.7rem;
+}
+
+.quiz-progress {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.quiz-stat {
+    text-align: center;
+    padding: 0.8rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.study-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.study-time i {
+    font-size: 1.5rem;
+}
+
+.btn-sm-reset {
+    width: 100%;
+    padding: 0.6rem;
+    background: var(--text-secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-sm-reset:hover {
+    background: var(--text-primary);
+}
+
+.btn-sm-reset i {
+    margin-right: 5px;
+}
+
+/* ========================================
+   ブックマークパネル
+======================================== */
+.bookmark-panel {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-320px);
+    width: 350px;
+    background: var(--bg-white);
+    border-radius: 0 16px 16px 0;
+    box-shadow: var(--shadow-xl);
+    z-index: 999;
+    transition: transform 0.3s;
+}
+
+.bookmark-panel.open {
+    transform: translateY(-50%) translateX(0);
+}
+
+.bookmark-toggle {
+    position: absolute;
+    right: -50px;
+    top: 20px;
+    width: 50px;
+    height: 100px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    box-shadow: var(--shadow-md);
+    transition: background 0.3s;
+}
+
+.bookmark-toggle:hover {
+    background: #d97706;
+}
+
+.bookmark-toggle i {
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+}
+
+.bookmark-content {
+    padding: 2rem 1.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.bookmark-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bookmark-content h3 i {
+    color: var(--accent-color);
+}
+
+.bookmark-hint {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+.bookmark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookmark-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.bookmark-item i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.bookmark-item:hover i {
+    color: white;
+}
+
+.bookmark-item-text {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.bookmark-remove {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bookmark-item:hover .bookmark-remove {
+    opacity: 1;
+}
+
+.bookmark-remove:hover {
+    color: #ef4444;
+}
+
+.bookmark-empty {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.bookmark-empty i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    opacity: 0.3;
+}
+
+/* ========================================
+   ページトップボタン
+======================================== */
+.page-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.page-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-top-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* 大画面でパネルが表示される時のコンテンツ幅調整 */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .progress-panel,
+    .bookmark-panel {
+        display: none;
+    }
+}

@@ -271,6 +271,10 @@ html {
     background: linear-gradient(135deg, #e34c26 0%, #f06529 50%, #264de4 100%);
 }
 
+.course-icon.fe {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+}
+
 .course-title-area {
     flex: 1;
 }
