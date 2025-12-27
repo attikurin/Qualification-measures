@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // ページトップへ戻るボタン
     // ========================================
-    const pageTopBtn = document.getElementById('page-top');
+    const pageTopBtn = document.getElementById('page-top-btn');
 
     if (pageTopBtn) {
         window.addEventListener('scroll', function() {

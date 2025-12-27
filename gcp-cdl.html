@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Cloud Digital Leader 完全対策講座【2025年最新版】</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gcp-cdl.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <a href="index.html" style="color: inherit; text-decoration: none;">
+                        <span>試験対策講座ポータル</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">トップ</a>
+                    <a href="#overview">試験概要</a>
+                    <a href="#scope">出題範囲</a>
+                    <a href="#strategy">攻略法</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずナビゲーション -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> トップ</a>
+            <span class="separator">›</span>
+            <span class="current">GCP Cloud Digital Leader 完全対策講座</span>
+        </div>
+    </div>
+
+    <!-- ページヒーロー -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="hero-icon">
+                    <i class="fab fa-google"></i>
+                </div>
+                <h1 class="page-title">GCP Cloud Digital Leader<br>完全対策講座</h1>
+                <p class="page-subtitle">Google Cloud認定資格 | 基礎レベル | グローバル標準</p>
+                <p class="hero-description">
+                    Google Cloudの基礎知識とクラウド技術を証明する認定資格。<br>
+                    非エンジニアやクラウド初学者に最適な入門資格です。
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">90分</div>
+                        <div class="stat-label">試験時間</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50問</div>
+                        <div class="stat-label">出題数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$99</div>
+                        <div class="stat-label">受験料(USD)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 目次ナビゲーション -->
+    <nav class="toc-nav">
+        <div class="container">
+            <button class="toc-toggle" id="toc-toggle">
+                <i class="fas fa-list"></i> 
+                <span>目次</span>
+                <i class="fas fa-chevron-down toc-toggle-icon"></i>
+            </button>
+            <div class="toc-content" id="toc-content">
+                <div class="toc-grid">
+                    <a href="#overview" class="toc-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>試験概要</span>
+                    </a>
+                    <a href="#scope" class="toc-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>出題範囲</span>
+                    </a>
+                    <a href="#passing" class="toc-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>合格基準</span>
+                    </a>
+                    <a href="#time" class="toc-item">
+                        <i class="fas fa-clock"></i>
+                        <span>勉強時間</span>
+                    </a>
+                    <a href="#strategy" class="toc-item">
+                        <i class="fas fa-bullseye"></i>
+                        <span>分野別攻略法</span>
+                    </a>
+                    <a href="#services" class="toc-item">
+                        <i class="fas fa-server"></i>
+                        <span>重要サービス</span>
+                    </a>
+                    <a href="#quiz" class="toc-item">
+                        <i class="fas fa-pen-alt"></i>
+                        <span>練習問題</span>
+                    </a>
+                    <a href="#materials" class="toc-item">
+                        <i class="fas fa-book"></i>
+                        <span>おすすめ教材</span>
+                    </a>
+                    <a href="#study" class="toc-item">
+                        <i class="fas fa-book-reader"></i>
+                        <span>学習方法</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 試験概要セクション -->
+    <section id="overview" class="content-section" data-section-name="試験概要">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-info-circle"></i> 試験概要
+                <button class="bookmark-btn" data-section="overview" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    Cloud Digital Leaderは、Google Cloud（旧GCP）の認定資格の中で最も基礎的な資格です。
+                    クラウドの基本概念とGoogle Cloudのコアサービスに関する知識を証明します。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-clipboard-list"></i> 試験の基本情報
+            </h3>
+
+            <div class="info-table">
+                <table>
+                    <tr>
+                        <th>項目</th>
+                        <th>内容</th>
+                    </tr>
+                    <tr>
+                        <td>試験時間</td>
+                        <td>90分</td>
+                    </tr>
+                    <tr>
+                        <td>出題数</td>
+                        <td>50問（多肢選択式）</td>
+                    </tr>
+                    <tr>
+                        <td>試験方式</td>
+                        <td>CBT方式（テストセンターまたはオンライン）</td>
+                    </tr>
+                    <tr>
+                        <td>受験料</td>
+                        <td>$99 USD（約14,000円）</td>
+                    </tr>
+                    <tr>
+                        <td>言語</td>
+                        <td>日本語、英語 他</td>
+                    </tr>
+                    <tr>
+                        <td>実施頻度</td>
+                        <td>随時受験可能</td>
+                    </tr>
+                    <tr>
+                        <td>有効期限</td>
+                        <td>3年間</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-star"></i> 試験の特徴
+            </h3>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>技術的な前提知識は不要</h4>
+                    <p>特定の職務経験やGoogle Cloudの実務経験は必須ではありません</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>ビジネス視点を重視</h4>
+                    <p>技術的な深い知識よりも、ビジネス価値や使用例の理解が問われます</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h4>広く浅い知識</h4>
+                    <p>Google Cloudの幅広いサービスについて、概要レベルの理解が求められます</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h4>サービス名の理解が重要</h4>
+                    <p>各サービスの名称と適切なユースケースを関連付けられることが必要です</p>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>公式リンク</h4>
+                    <ul>
+                        <li><a href="https://cloud.google.com/learn/certification/cloud-digital-leader" target="_blank" rel="noopener noreferrer">Cloud Digital Leader 公式ページ</a></li>
+                        <li><a href="https://cloud.google.com/learn/certification/guides/cloud-digital-leader" target="_blank" rel="noopener noreferrer">試験ガイド（公式）</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 出題範囲セクション -->
+    <section id="scope" class="content-section alt-bg" data-section-name="出題範囲">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-pie"></i> 試験の出題範囲と配点
+                <button class="bookmark-btn" data-section="scope" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    試験は4つの主要セクションから構成されています。データ、インフラ、セキュリティの3分野で約90%を占めます。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-list-ol"></i> 出題セクションと配点（2024年版）
+            </h3>
+
+            <div class="scope-cards">
+                <div class="scope-card">
+                    <div class="scope-header">
+                        <div class="scope-number">1</div>
+                        <h4>デジタルトランスフォーメーションとGoogle Cloud</h4>
+                        <div class="scope-weight">約10-15%</div>
+                    </div>
+                    <p class="scope-description">クラウドの価値提案、クラウドモデル（IaaS/PaaS/SaaS）、総所有コスト（TCO）、CapEx vs OpEx、Google Cloudのグローバルインフラストラクチャ</p>
+                </div>
+
+                <div class="scope-card">
+                    <div class="scope-header">
+                        <div class="scope-number">2</div>
+                        <h4>データとスマートアナリティクス</h4>
+                        <div class="scope-weight">約30%</div>
+                    </div>
+                    <p class="scope-description">BigQuery、Cloud Storage、Pub/Sub、Dataflow、Looker、データライフサイクル管理、データガバナンス</p>
+                </div>
+
+                <div class="scope-card">
+                    <div class="scope-header">
+                        <div class="scope-number">3</div>
+                        <h4>インフラストラクチャとアプリケーションのモダナイゼーション</h4>
+                        <div class="scope-weight">約30%</div>
+                    </div>
+                    <p class="scope-description">Compute Engine、Google Kubernetes Engine（GKE）、Cloud Run、App Engine、Cloud Functions、ハイブリッド・マルチクラウド、Anthos</p>
+                </div>
+
+                <div class="scope-card">
+                    <div class="scope-header">
+                        <div class="scope-number">4</div>
+                        <h4>Google Cloudのセキュリティとオペレーション</h4>
+                        <div class="scope-weight">約30%</div>
+                    </div>
+                    <p class="scope-description">IAM（Identity and Access Management）、Cloud Identity、責任共有モデル、コンプライアンス、Cloud Monitoring、Cloud Logging、コスト管理、課金レポート</p>
+                </div>
+            </div>
+
+            <div class="alert-box warning">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>重要ポイント</h4>
+                    <ul>
+                        <li>データ、インフラ、セキュリティの3分野が各30%と最も重要です</li>
+                        <li>ビジネス視点でのクラウド価値理解が求められます</li>
+                        <li>実際の試験では50問すべてが採点対象です</li>
+                        <li>各サービスの名称と適切なユースケースの関連付けが重要です</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合格基準セクション -->
+    <section id="passing" class="content-section" data-section-name="合格基準">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-check-circle"></i> 合格基準と採点方式
+                <button class="bookmark-btn" data-section="passing" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    Google Cloud認定試験では、具体的な合格スコアは公開されていません。試験結果は「合格（Pass）」または「不合格（Fail）」で通知されます。スコアは表示されません。
+                </p>
+            </div>
+
+            <div class="stats-display">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-number">Pass/Fail</div>
+                    <div class="stat-label">判定方式</div>
+                    <p class="stat-desc">約35問/50問の正答</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-number">Pass/Fail</div>
+                    <div class="stat-label">判定方式</div>
+                    <p class="stat-desc">具体的なスコアは非表示</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">即日</div>
+                    <div class="stat-label">結果確認</div>
+                    <p class="stat-desc">試験終了後すぐに合否</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line"></i> 難易度と合格率
+            </h3>
+
+            <div class="info-table">
+                <table>
+                    <tr>
+                        <th>指標</th>
+                        <th>内容</th>
+                    </tr>
+                    <tr>
+                        <td>難易度</td>
+                        <td>比較的低い（Google Cloud資格の中で最も基礎的）</td>
+                    </tr>
+                    <tr>
+                        <td>推定合格率</td>
+                        <td>約60%前後</td>
+                    </tr>
+                    <tr>
+                        <td>対象者</td>
+                        <td>IT初心者、非エンジニア、クラウド初学者</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>前提知識として必要なもの</h4>
+                    <ul>
+                        <li>ITパスポート試験レベルのIT基礎知識</li>
+                        <li>クライアント、サーバー、ネットワーク、IPアドレスなどの基本用語の理解</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 勉強時間セクション -->
+    <section id="time" class="content-section alt-bg" data-section-name="勉強時間">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i> 勉強時間の目安
+                <button class="bookmark-btn" data-section="time" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    学習に必要な時間は、現在のスキルレベルや経験によって大きく異なります。
+                    以下は一般的な目安です。
+                </p>
+            </div>
+
+            <div class="time-cards">
+                <div class="time-card">
+                    <div class="time-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>IT初心者</h4>
+                    <div class="time-hours">60～80時間</div>
+                    <div class="time-period">
+                        <p>約1～2ヶ月</p>
+                        <p class="time-detail">（1日2時間の学習）</p>
+                    </div>
+                    <ul class="time-desc">
+                        <li>クラウドの基本概念から学習</li>
+                        <li>IT用語の理解が必要</li>
+                    </ul>
+                </div>
+
+                <div class="time-card recommended">
+                    <div class="recommend-badge">
+                        <i class="fas fa-star"></i> おすすめ
+                    </div>
+                    <div class="time-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>IT基礎知識あり</h4>
+                    <div class="time-hours">40～60時間</div>
+                    <div class="time-period">
+                        <p>約2～4週間</p>
+                        <p class="time-detail">（1日2～3時間の学習）</p>
+                    </div>
+                    <ul class="time-desc">
+                        <li>Google Cloud固有の知識に集中</li>
+                        <li>効率的な学習が可能</li>
+                    </ul>
+                </div>
+
+                <div class="time-card">
+                    <div class="time-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>クラウド経験者</h4>
+                    <div class="time-hours">20～40時間</div>
+                    <div class="time-period">
+                        <p>約1～2週間</p>
+                        <p class="time-detail">（1日2～3時間の学習）</p>
+                    </div>
+                    <ul class="time-desc">
+                        <li>AWS/Azure経験者は短期間で習得</li>
+                        <li>GCP特有のサービスに注目</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>Google公式の推奨</h4>
+                    <p>Google公式では約90時間の学習を推奨していますが、実際の合格者の多くは20～80時間程度で合格しています。</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-calendar-alt"></i> 2週間の学習スケジュール例
+            </h3>
+
+            <div class="schedule-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>日程</th>
+                            <th>学習内容</th>
+                            <th>時間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Day 1～3</td>
+                            <td>
+                                <strong>セクション1～2の学習</strong><br>
+                                デジタルトランスフォーメーション<br>
+                                データトランスフォーメーション
+                            </td>
+                            <td>6時間</td>
+                        </tr>
+                        <tr>
+                            <td>Day 4～6</td>
+                            <td>
+                                <strong>セクション3～4の学習</strong><br>
+                                AI・MLによるイノベーション<br>
+                                インフラ・アプリのモダナイゼーション
+                            </td>
+                            <td>6時間</td>
+                        </tr>
+                        <tr>
+                            <td>Day 7～9</td>
+                            <td>
+                                <strong>セクション5～6の学習</strong><br>
+                                信頼とセキュリティ<br>
+                                クラウド運用のスケーリング
+                            </td>
+                            <td>6時間</td>
+                        </tr>
+                        <tr>
+                            <td>Day 10～11</td>
+                            <td>
+                                <strong>公式模擬試験と弱点克服</strong><br>
+                                公式模擬試験の実施<br>
+                                苦手分野の復習
+                            </td>
+                            <td>4時間</td>
+                        </tr>
+                        <tr>
+                            <td>Day 12～13</td>
+                            <td>
+                                <strong>Udemy等の模擬試験</strong><br>
+                                サードパーティ問題集<br>
+                                総復習
+                            </td>
+                            <td>4時間</td>
+                        </tr>
+                        <tr>
+                            <td>Day 14</td>
+                            <td>
+                                <strong>最終確認と受験</strong><br>
+                                重要ポイントの最終確認<br>
+                                試験当日
+                            </td>
+                            <td>2時間</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分野別攻略法セクション -->
+    <section id="strategy" class="content-section" data-section-name="分野別攻略法">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i> 分野別攻略法
+                <button class="bookmark-btn" data-section="strategy" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    6つの出題セクションについて、効果的な学習のポイントと重要事項をまとめました。
+                    すべてのセクションがほぼ均等に出題されるため、バランスよく学習することが重要です。
+                </p>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">1</div>
+                    <h3>デジタルトランスフォーメーション</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>クラウドの価値提案</strong>：コスト削減、俊敏性、スケーラビリティ</li>
+                        <li><strong>CapExとOpExの違い</strong>：設備投資から運用費用への転換</li>
+                        <li><strong>TCO（総所有コスト）</strong>：オンプレミスとクラウドのコスト比較</li>
+                        <li><strong>移行戦略</strong>：Lift & Shift、リファクタリング、リビルド</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>ビジネスメリットを中心に理解する。技術的な詳細よりも「なぜクラウドを使うのか」という視点が重要。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">2</div>
+                    <h3>データトランスフォーメーション</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>データベースの種類</strong>：Cloud SQL、Firestore、Spanner、BigTable</li>
+                        <li><strong>BigQuery</strong>：データウェアハウス、大規模データ分析</li>
+                        <li><strong>データパイプライン</strong>：Dataflow、Dataproc、Pub/Sub</li>
+                        <li><strong>データレイク vs データウェアハウス</strong>：構造化/非構造化データの違い</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>各サービスの使い分けを重点的に学習。「どのデータベースをどのシーンで使うか」が頻出。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">3</div>
+                    <h3>AI・MLによるイノベーション</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>ML APIs</strong>：Vision API、Natural Language API、Translation API</li>
+                        <li><strong>Vertex AI</strong>：機械学習プラットフォーム、AutoML</li>
+                        <li><strong>AI/MLの用語</strong>：教師あり学習、教師なし学習、強化学習</li>
+                        <li><strong>ビジネス活用例</strong>：画像認識、自然言語処理、レコメンデーション</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>技術的な実装よりも、各APIでできることとビジネス活用シーンを理解する。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">4</div>
+                    <h3>インフラ・アプリのモダナイゼーション</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>コンピューティングサービス</strong>：Compute Engine、GKE、Cloud Run、App Engine</li>
+                        <li><strong>コンテナとKubernetes</strong>：マイクロサービスアーキテクチャ</li>
+                        <li><strong>サーバーレス</strong>：Cloud Functions、Cloud Run</li>
+                        <li><strong>ハイブリッド/マルチクラウド</strong>：Anthos</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>各コンピューティングサービスの使い分けが最重要。サービス名と特徴を正確に覚える。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">5</div>
+                    <h3>信頼とセキュリティ</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>IAM（Identity and Access Management）</strong>：権限管理、最小権限の原則</li>
+                        <li><strong>暗号化</strong>：転送中の暗号化、保存時の暗号化</li>
+                        <li><strong>コンプライアンス</strong>：GDPR、ISO認証、SOC</li>
+                        <li><strong>責任共有モデル</strong>：Google と顧客の責任範囲</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>IAMの仕組みと責任共有モデルは必須。セキュリティ用語（認証、認可、監査）の違いを明確に。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-section">
+                <div class="strategy-header">
+                    <div class="strategy-number">6</div>
+                    <h3>クラウド運用のスケーリング</h3>
+                    <span class="strategy-weight">約17%</span>
+                </div>
+                <div class="strategy-content">
+                    <h4><i class="fas fa-key"></i> 重要ポイント</h4>
+                    <ul class="strategy-points">
+                        <li><strong>コスト管理</strong>：Billing、Budget Alerts、コミットメント使用割引</li>
+                        <li><strong>リソース管理</strong>：Organization、Folder、Project の階層</li>
+                        <li><strong>モニタリング</strong>：Cloud Monitoring、Cloud Logging</li>
+                        <li><strong>DevOps/SRE</strong>：CI/CD、インフラのコード化（IaC）</li>
+                    </ul>
+                    <div class="strategy-tips">
+                        <h5><i class="fas fa-lightbulb"></i> 学習のコツ</h5>
+                        <p>コスト最適化の手法と、組織階層の管理方法を理解する。モニタリングツールの役割も重要。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box success">
+                <div class="alert-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>攻略のポイント</h4>
+                    <ul>
+                        <li>すべてのセクションを均等に学習する（特定分野だけ集中しない）</li>
+                        <li>サービス名とその用途を正確に覚える</li>
+                        <li>ビジネス視点での理解を重視する</li>
+                        <li>公式ドキュメントで最新情報を確認する</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重要サービス一覧セクション -->
+    <section id="services" class="content-section alt-bg" data-section-name="重要サービス">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-server"></i> 重要サービス一覧
+                <button class="bookmark-btn" data-section="services" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    Cloud Digital Leader試験で頻出する主要なGoogle Cloudサービスをカテゴリ別にまとめました。
+                    各サービスの名称と用途を正確に覚えることが合格の鍵です。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-laptop-code"></i> コンピューティング
+            </h3>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス</th>
+                            <th>タイプ</th>
+                            <th>特徴</th>
+                            <th>使用例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Compute Engine</strong></td>
+                            <td>IaaS（VM）</td>
+                            <td>完全な制御、カスタマイズ可能</td>
+                            <td>レガシーアプリ移行</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Kubernetes Engine (GKE)</strong></td>
+                            <td>コンテナ管理</td>
+                            <td>マネージドKubernetes</td>
+                            <td>マイクロサービス</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Run</strong></td>
+                            <td>サーバーレス</td>
+                            <td>コンテナベース、自動スケール</td>
+                            <td>Web API、マイクロサービス</td>
+                        </tr>
+                        <tr>
+                            <td><strong>App Engine</strong></td>
+                            <td>PaaS</td>
+                            <td>フルマネージド、自動スケール</td>
+                            <td>Webアプリ全体</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Functions</strong></td>
+                            <td>FaaS</td>
+                            <td>イベント駆動、軽量</td>
+                            <td>バックエンド処理</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-database"></i> ストレージ・データベース
+            </h3>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス</th>
+                            <th>タイプ</th>
+                            <th>特徴</th>
+                            <th>使用例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cloud Storage</strong></td>
+                            <td>オブジェクトストレージ</td>
+                            <td>無制限容量、4つのクラス</td>
+                            <td>画像、動画、バックアップ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud SQL</strong></td>
+                            <td>リレーショナルDB</td>
+                            <td>MySQL/PostgreSQL/SQL Server</td>
+                            <td>業務アプリDB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Spanner</strong></td>
+                            <td>リレーショナルDB</td>
+                            <td>グローバル分散、水平スケール</td>
+                            <td>世界規模のアプリ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Bigtable</strong></td>
+                            <td>NoSQL（列指向）</td>
+                            <td>低レイテンシ、大規模</td>
+                            <td>IoT、時系列データ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BigQuery</strong></td>
+                            <td>データウェアハウス</td>
+                            <td>サーバーレス、ペタバイト級</td>
+                            <td>データ分析、BI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Firestore</strong></td>
+                            <td>NoSQL（ドキュメント）</td>
+                            <td>リアルタイム同期</td>
+                            <td>モバイル/Webアプリ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-brain"></i> AI・機械学習
+            </h3>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス</th>
+                            <th>難易度</th>
+                            <th>特徴</th>
+                            <th>使用例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vision API</strong></td>
+                            <td>低</td>
+                            <td>事前学習済み画像認識</td>
+                            <td>画像分類、OCR</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Natural Language API</strong></td>
+                            <td>低</td>
+                            <td>事前学習済みテキスト分析</td>
+                            <td>感情分析</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Translation API</strong></td>
+                            <td>低</td>
+                            <td>機械翻訳</td>
+                            <td>多言語対応</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speech-to-Text / Text-to-Speech</strong></td>
+                            <td>低</td>
+                            <td>音声認識・合成</td>
+                            <td>音声アプリ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vertex AI</strong></td>
+                            <td>高</td>
+                            <td>MLプラットフォーム全体</td>
+                            <td>本格的なML開発</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-shield-alt"></i> ネットワーク・セキュリティ
+            </h3>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス</th>
+                            <th>役割</th>
+                            <th>特徴</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>VPC</strong></td>
+                            <td>ネットワーク</td>
+                            <td>プライベートネットワーク</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Load Balancing</strong></td>
+                            <td>負荷分散</td>
+                            <td>グローバルな負荷分散</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Armor</strong></td>
+                            <td>セキュリティ</td>
+                            <td>DDoS対策、WAF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud IAM</strong></td>
+                            <td>アクセス管理</td>
+                            <td>認証・認可</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud KMS</strong></td>
+                            <td>鍵管理</td>
+                            <td>暗号鍵の管理</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert-box info">
+                <div class="alert-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>暗記のコツ</h4>
+                    <ul>
+                        <li>サービス名だけでなく、「どんな時に使うか」をセットで覚える</li>
+                        <li>似たサービスの違いを明確にする（例：Cloud Run vs GKE）</li>
+                        <li>ハンズオンで実際に触れると理解が深まる</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- おすすめ教材セクション -->
+    <section id="materials" class="content-section" data-section-name="おすすめ教材">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-book"></i> おすすめ教材
+                <button class="bookmark-btn" data-section="materials" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    効率的に合格を目指すための推奨教材をまとめました。
+                    公式リソースを中心に、信頼性の高い教材を選定しています。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-star"></i> 公式リソース（必須）
+            </h3>
+
+            <div class="material-grid">
+                <div class="material-card priority">
+                    <div class="material-badge">
+                        <i class="fas fa-crown"></i> 最優先
+                    </div>
+                    <h4><i class="fas fa-file-alt"></i> 公式試験ガイド</h4>
+                    <p class="material-desc">
+                        試験範囲と出題形式を確認できる公式ドキュメント。
+                        学習の出発点として必ず確認しましょう。
+                    </p>
+                    <a href="https://cloud.google.com/learn/certification/cloud-digital-leader" target="_blank" rel="noopener noreferrer" class="material-link">
+                        <i class="fas fa-external-link-alt"></i> 公式ページへ
+                    </a>
+                </div>
+
+                <div class="material-card priority">
+                    <div class="material-badge">
+                        <i class="fas fa-crown"></i> 最優先
+                    </div>
+                    <h4><i class="fas fa-pen-fancy"></i> 公式模擬試験</h4>
+                    <p class="material-desc">
+                        20問の無料模擬試験。実際の試験形式を体験でき、
+                        解説も充実しています。
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSedAmf6JGhzQdvXHPRbKsJ8K8RCvRxHbH3d9nL8Kq8vqCVz3g/viewform" target="_blank" rel="noopener noreferrer" class="material-link">
+                        <i class="fas fa-external-link-alt"></i> 模擬試験へ
+                    </a>
+                </div>
+
+                <div class="material-card">
+                    <h4><i class="fas fa-book-open"></i> Cloud Skills Boost</h4>
+                    <p class="material-desc">
+                        Googleの公式ハンズオントレーニング。
+                        実際にGCPを操作しながら学習できます。
+                    </p>
+                    <a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener noreferrer" class="material-link">
+                        <i class="fas fa-external-link-alt"></i> サイトへ
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-graduation-cap"></i> オンライン学習コース
+            </h3>
+
+            <div class="material-grid">
+                <div class="material-card recommended">
+                    <div class="material-badge">
+                        <i class="fas fa-star"></i> おすすめ
+                    </div>
+                    <h4><i class="fab fa-youtube"></i> Udemy コース</h4>
+                    <p class="material-desc">
+                        日本語の動画講座と模擬試験問題集。
+                        320問の練習問題で実力を確実に伸ばせます。
+                    </p>
+                    <div class="material-features">
+                        <span class="feature-tag">動画講座</span>
+                        <span class="feature-tag">模擬試験6回分</span>
+                        <span class="feature-tag">日本語対応</span>
+                    </div>
+                    <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" class="material-link">
+                        <i class="fas fa-external-link-alt"></i> Udemyで探す
+                    </a>
+                </div>
+
+                <div class="material-card">
+                    <h4><i class="fas fa-globe"></i> Coursera</h4>
+                    <p class="material-desc">
+                        Google Cloudの公式パートナーコース。
+                        英語ですが、字幕対応で学習可能です。
+                    </p>
+                    <div class="material-features">
+                        <span class="feature-tag">公式パートナー</span>
+                        <span class="feature-tag">認定証発行</span>
+                    </div>
+                    <a href="https://www.coursera.org/professional-certificates/cloud-digital-leader" target="_blank" rel="noopener noreferrer" class="material-link">
+                        <i class="fas fa-external-link-alt"></i> コースへ
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-question-circle"></i> 練習問題リソース
+            </h3>
+
+            <div class="resource-list">
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h4>ExamTopics</h4>
+                        <p>コミュニティ提供の無料練習問題。多くの受験者が活用しています。</p>
+                        <a href="https://www.examtopics.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                            サイトへ <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-item">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h4>IT Concepts Japan</h4>
+                        <p>日本語の無料問題集と詳しい解説。初学者にもおすすめ。</p>
+                        <a href="https://www.itconceptsjapan.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                            サイトへ <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box success">
+                <div class="alert-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>学習のポイント</h4>
+                    <ul>
+                        <li><strong>公式リソースを最優先</strong>：試験ガイドと公式模擬試験は必ず確認</li>
+                        <li><strong>練習問題は80%以上の正答率</strong>：繰り返し解いて安定した正答率を目指す</li>
+                        <li><strong>間違えた問題の分析</strong>：なぜ間違えたかを理解し、関連サービスも調査</li>
+                        <li><strong>公式ドキュメントで裏付け</strong>：練習問題の解説だけでなく、公式情報も確認</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 練習問題セクション -->
+    <section id="quiz" class="content-section alt-bg" data-section-name="練習問題">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-pen-alt"></i> 練習問題
+                <button class="bookmark-btn" data-section="quiz" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    GCP Cloud Digital Leader試験の重要トピックをカバーした20問の練習問題です。
+                    実際の試験形式に沿った問題で、理解度を確認しましょう。
+                </p>
+            </div>
+
+            <!-- クイズフィルター -->
+            <div class="quiz-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> すべて (20)
+                </button>
+                <button class="filter-btn" data-filter="dx">
+                    <i class="fas fa-digital-tachograph"></i> DX
+                </button>
+                <button class="filter-btn" data-filter="data">
+                    <i class="fas fa-database"></i> データ
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <i class="fas fa-brain"></i> AI/ML
+                </button>
+                <button class="filter-btn" data-filter="infra">
+                    <i class="fas fa-server"></i> インフラ
+                </button>
+                <button class="filter-btn" data-filter="security">
+                    <i class="fas fa-shield-alt"></i> セキュリティ
+                </button>
+                <button class="filter-btn" data-filter="ops">
+                    <i class="fas fa-cogs"></i> 運用
+                </button>
+            </div>
+
+            <!-- 統計表示 -->
+            <div class="quiz-stats-display">
+                <div class="stat-box">
+                    <div class="stat-label">回答済み</div>
+                    <div class="stat-value" id="answered-count">0 / 20</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">正解数</div>
+                    <div class="stat-value correct" id="correct-count">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">正答率</div>
+                    <div class="stat-value" id="accuracy-rate">0%</div>
+                </div>
+                <button id="reset-quiz" class="reset-btn">
+                    <i class="fas fa-redo"></i> リセット
+                </button>
+            </div>
+
+            <!-- 問題リスト -->
+            <div id="quiz-container" class="quiz-container">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 学習方法セクション -->
+    <section id="study" class="content-section" data-section-name="学習方法">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-book-reader"></i> 効果的な学習方法
+                <button class="bookmark-btn" data-section="study" title="ブックマークに追加">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </h2>
+
+            <div class="intro-text">
+                <p>
+                    Cloud Digital Leader試験に合格するための効果的な学習方法とポイントをまとめました。
+                </p>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-route"></i> 推奨学習フロー
+            </h3>
+
+            <div class="study-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4><i class="fas fa-book-open"></i> 公式ガイドの確認</h4>
+                        <p>試験範囲と出題形式を把握する</p>
+                        <ul>
+                            <li>公式試験ガイドを熟読</li>
+                            <li>6つの出題セクションを理解</li>
+                            <li>試験の目的と対象者を確認</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4><i class="fas fa-graduation-cap"></i> 基礎学習</h4>
+                        <p>各セクションの基本概念を学習</p>
+                        <ul>
+                            <li>オンラインコースで体系的に学習</li>
+                            <li>公式ドキュメントで詳細を確認</li>
+                            <li>重要サービスの名称と用途を暗記</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4><i class="fas fa-clipboard-check"></i> 練習問題で実力確認</h4>
+                        <p>理解度を測定し弱点を発見</p>
+                        <ul>
+                            <li>公式模擬試験を実施</li>
+                            <li>間違えた問題を徹底分析</li>
+                            <li>関連サービスも合わせて復習</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4><i class="fas fa-redo"></i> 弱点克服</h4>
+                        <p>苦手分野を重点的に学習</p>
+                        <ul>
+                            <li>間違えた分野の公式ドキュメント確認</li>
+                            <li>サービスの使い分けを再確認</li>
+                            <li>ビジネスユースケースを理解</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4><i class="fas fa-check-circle"></i> 総仕上げ</h4>
+                        <p>本番に向けた最終確認</p>
+                        <ul>
+                            <li>複数の模擬試験で80%以上の正答率</li>
+                            <li>時間配分の練習（90分で50問）</li>
+                            <li>重要ポイントの最終確認</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-star"></i> 合格のためのポイント
+            </h3>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>すべてのセクションをバランスよく</h4>
+                    <p>6つのセクションはほぼ均等に出題されます。特定分野に偏らず、全体をカバーすることが重要です。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>ビジネス視点を重視</h4>
+                    <p>技術的な深い理解よりも、「ビジネス価値」「コスト効果」「使い分け」を重視しましょう。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h4>サービス名と用途を正確に</h4>
+                    <p>サービス名称とその用途を正確に覚えることが最も重要です。似たサービスの違いも明確に。</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <h4>練習問題を繰り返す</h4>
+                    <p>公式模擬試験とサードパーティ問題を繰り返し解き、80%以上の正答率を安定して出せるようにしましょう。</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-exclamation-triangle"></i> 避けるべき学習法
+            </h3>
+
+            <div class="warning-list">
+                <div class="warning-item">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="warning-content">
+                        <h4>公式リソースを無視する</h4>
+                        <p>公式試験ガイドと公式模擬試験は必須です。これらを確認せずに学習を進めるのは非効率です。</p>
+                    </div>
+                </div>
+
+                <div class="warning-item">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="warning-content">
+                        <h4>特定分野だけに集中</h4>
+                        <p>すべてのセクションから均等に出題されます。得意分野だけでは合格できません。</p>
+                    </div>
+                </div>
+
+                <div class="warning-item">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="warning-content">
+                        <h4>暗記だけに頼る</h4>
+                        <p>サービス名を暗記するだけでは不十分。「なぜそのサービスを使うのか」を理解しましょう。</p>
+                    </div>
+                </div>
+
+                <div class="warning-item">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="warning-content">
+                        <h4>練習問題をやらない</h4>
+                        <p>実際の試験形式に慣れることが重要です。必ず複数の模擬試験を実施しましょう。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-box success">
+                <div class="alert-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="alert-content">
+                    <h4>合格者の声</h4>
+                    <p>
+                        「公式模擬試験を3回繰り返し、すべて正解できるようになってから受験しました。
+                        本番では似た問題も出題され、落ち着いて解答できました。
+                        サービス名と用途をセットで覚えることが最も重要だと感じました。」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>試験対策講座ポータル</span>
+                </div>
+                <p class="footer-text">
+                    GCP Cloud Digital Leaderの合格を目指すすべての方を応援します
+                </p>
+                <div class="footer-links">
+                    <a href="https://cloud.google.com/learn/certification/cloud-digital-leader" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> Google Cloud公式サイト
+                    </a>
+                </div>
+                <p class="copyright">
+                    &copy; 2025 試験対策講座ポータル. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 学習進捗管理パネル -->
+    <div id="progress-panel" class="progress-panel">
+        <button id="progress-toggle" class="progress-toggle">
+            <i class="fas fa-chart-line"></i>
+            <span>学習進捗</span>
+        </button>
+        <div id="progress-content" class="progress-content">
+            <h3><i class="fas fa-chart-pie"></i> 学習進捗</h3>
+            
+            <!-- 全体進捗 -->
+            <div class="progress-section">
+                <h4>全体の進捗</h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overall-progress">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text" id="overall-progress-text">0%</span>
+                </div>
+            </div>
+            
+            <!-- セクション別進捗 -->
+            <div class="progress-section">
+                <h4>セクション別</h4>
+                <div class="section-progress-list" id="section-progress-list">
+                    <!-- JavaScriptで動的に生成 -->
+                </div>
+            </div>
+            
+            <!-- 練習問題進捗 -->
+            <div class="progress-section">
+                <h4>練習問題</h4>
+                <div class="quiz-progress">
+                    <div class="quiz-stat">
+                        <span class="stat-label">正解数</span>
+                        <span class="stat-value" id="quiz-correct">0</span>
+                    </div>
+                    <div class="quiz-stat">
+                        <span class="stat-label">回答数</span>
+                        <span class="stat-value" id="quiz-answered">0</span>
+                    </div>
+                    <div class="quiz-stat">
+                        <span class="stat-label">正答率</span>
+                        <span class="stat-value" id="quiz-rate">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 学習時間 -->
+            <div class="progress-section">
+                <h4>学習時間</h4>
+                <div class="study-time">
+                    <i class="fas fa-clock"></i>
+                    <span id="study-time-display">0分</span>
+                </div>
+                <button id="reset-progress-btn" class="btn-sm-reset">
+                    <i class="fas fa-undo"></i> 進捗をリセット
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ブックマークパネル -->
+    <div id="bookmark-panel" class="bookmark-panel">
+        <button id="bookmark-toggle" class="bookmark-toggle">
+            <i class="fas fa-bookmark"></i>
+            <span>ブックマーク</span>
+        </button>
+        <div id="bookmark-content" class="bookmark-content">
+            <h3><i class="fas fa-bookmark"></i> ブックマーク</h3>
+            <p class="bookmark-hint">各セクションのブックマークアイコンをクリックして保存できます</p>
+            <div id="bookmark-list" class="bookmark-list">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+            <button id="clear-bookmarks-btn" class="btn-sm-reset">
+                <i class="fas fa-trash"></i> すべて削除
+            </button>
+        </div>
+    </div>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="page-top-btn" class="page-top-btn" title="ページトップへ戻る">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/common.js"></script>
+    <script src="js/gcp-cdl.js"></script>
+    <script src="js/gcp-cdl-quiz.js"></script>
+    <script src="js/gcp-cdl-progress.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /* ========================================
-   基本情報技術者試験講座専用スタイル
+   GCP Cloud Digital Leader講座専用スタイル
 ======================================== */
 
 /* ========================================
@@ -86,6 +86,23 @@
 .reset-btn:hover {
     background: #b91c1c;
     transform: translateY(-2px);
+}
+
+.quiz-stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-stats-display .stat-box:last-child {
+    grid-column: 1 / -1;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .quiz-list {
@@ -254,6 +271,33 @@
 
 .quiz-feedback.correct .feedback-result {
     color: #10b981;
+}
+
+.quiz-explanation {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+.explanation-content {
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.explanation-content strong {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.explanation-content p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 .quiz-feedback.incorrect .feedback-result {
@@ -654,7 +698,7 @@
    ページヒーロー
 ======================================== */
 .page-hero {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc04 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;

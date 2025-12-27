@@ -2,7 +2,7 @@
 
 ## 📖 プロジェクト概要
 
-**試験対策講座ポータル**は、各種資格試験の合格を目指す学習者を支援するWebサイトです。現在は**生成AIパスポート試験**、**ITパスポート試験**、**情報セキュリティマネジメント試験**、**MOS（Microsoft Office Specialist）**、**Webクリエイター能力認定試験 スタンダード**、**基本情報技術者試験**の完全対策講座を提供しています。
+**試験対策講座ポータル**は、各種資格試験の合格を目指す学習者を支援するWebサイトです。現在は**生成AIパスポート試験**、**ITパスポート試験**、**情報セキュリティマネジメント試験**、**MOS（Microsoft Office Specialist）**、**Webクリエイター能力認定試験 スタンダード**、**基本情報技術者試験**、**GCP Cloud Digital Leader**、**CompTIA ITF+**の完全対策講座を提供しています。
 
 ## 🎯 プロジェクトの目標
 
@@ -381,7 +381,99 @@
   - 学習のコツ（スキマ時間、問題演習重視、学習仲間、定期復習）
   - 避けるべき学習方法
 
-### 7. デザイン・UI/UX
+### 7. GCP Cloud Digital Leader 完全対策講座ページ（gcp-cdl.html）✨ NEW
+- **ページヒーロー**: 講座タイトルと概要（Google Cloudカラーグラデーション）
+- **目次ナビゲーション**: 各セクションへのスムーズスクロール（折りたたみ可能）
+- **試験概要セクション**:
+  - GCP Cloud Digital Leader試験とは（Google Cloud認定資格）
+  - 試験の基本情報（90分・50問・CBT方式）
+  - 受験料: $99 USD（約14,000円）
+  - 合格基準: Pass/Fail判定（具体的なスコアは非公開）
+  - 試験の特徴（複数選択問題、記述式なし、3年間有効）
+- **出題範囲セクション（2024年版）**:
+  - 4つの主要セクション:
+    - デジタルトランスフォーメーションとGoogle Cloud（約10-15%）
+    - データとスマートアナリティクス（約30%）
+    - インフラストラクチャとアプリケーションのモダナイゼーション（約30%）
+    - Google Cloudのセキュリティとオペレーション（約30%）
+- **合格基準セクション**:
+  - Pass/Fail判定（具体的な合格スコアは非公開）
+  - スコア表示なし
+  - 合格率: 非公開
+- **勉強時間セクション**:
+  - レベル別目安時間:
+    - IT初心者: 60～80時間（2～3ヶ月）
+    - 基礎知識あり: 40～60時間（1～2ヶ月）
+    - クラウド経験者: 20～40時間（2～4週間）
+- **分野別攻略法セクション**:
+  - 各分野の重要ポイントと学習のコツ
+- **重要サービスセクション**:
+  - カテゴリー別のGCPサービス一覧
+- **練習問題セクション**:
+  - 20問の厳選された練習問題
+  - 6分野別フィルター
+  - 即時フィードバックと詳細解説
+  - LocalStorageに解答を保存
+- **おすすめ教材セクション**:
+  - Google Cloud公式トレーニング
+  - Qwiklabs
+  - 参考書籍
+- **学習方法セクション**:
+  - 効率的な学習の進め方
+  - 学習のコツ
+- **学習進捗管理**: 右サイドパネル（gcp-cdl専用LocalStorage）
+- **ブックマーク機能**: 左サイドパネル（gcp-cdl専用LocalStorage）
+
+### 8. CompTIA ITF+ 完全対策講座ページ（comptia-itf.html）✨ NEW
+- **ページヒーロー**: 講座タイトルと概要（CompTIAオレンジカラーグラデーション）
+- **目次ナビゲーション**: 各セクションへのスムーズスクロール（折りたたみ可能）
+- **試験概要セクション**:
+  - CompTIA ITF+試験とは（IT Fundamentals+、試験番号: FC0-U61）
+  - 試験の基本情報（60分・最大75問・CBT方式）
+  - 受験料: 約$135 USD（約18,000円）※為替レートにより変動、学生割引あり
+  - 試験バージョン: V5（2018年9月～）
+  - 試験形式: 多肢選択式（単一選択・複数選択）
+  - 試験言語: 日本語 / 英語
+  - 資格の有効期限: 生涯有効
+- **出題範囲セクション**:
+  - 6つの出題ドメイン:
+    - ドメイン1: ITコンセプトと用語（17%）
+    - ドメイン2: インフラストラクチャ（22%）
+    - ドメイン3: アプリケーションとソフトウェア（18%）
+    - ドメイン4: ソフトウェア開発（12%）
+    - ドメイン5: データベースの基礎（11%）
+    - ドメイン6: セキュリティ（20%）
+- **合格基準セクション**:
+  - 合格点: 650点（100～900点のスケール）
+  - 実質的な合格ライン: 約65%の正答率
+  - 合格率: 非公開（60～70%と推測）
+- **勉強時間セクション**:
+  - レベル別目安時間:
+    - IT初心者: 60～80時間（2～3ヶ月）
+    - 基礎知識あり: 40～60時間（1～2ヶ月）
+    - IT経験者: 20～40時間（2～4週間）
+  - 学習期間の設定例（2ヶ月プラン: 週12時間、4週間プラン: 週15時間）
+- **分野別攻略法セクション**:
+  - 各ドメインの重要ポイントと学習のコツ
+- **練習問題セクション**:
+  - 20問の厳選された練習問題
+  - 6ドメイン別フィルター
+  - 即時フィードバックと詳細解説
+  - LocalStorageに解答を保存
+- **おすすめ教材セクション**:
+  - CompTIA公式教材
+  - Udemy講座
+  - 参考書籍
+- **学習方法セクション**:
+  - 効率的な学習の進め方（5ステップ）
+  - 学習のコツ
+- **申し込み方法セクション**:
+  - ピアソンVUE経由での申し込み手順
+  - プロメトリック経由での申し込み手順
+- **学習進捗管理**: 右サイドパネル（comptia-itf専用LocalStorage）
+- **ブックマーク機能**: 左サイドパネル（comptia-itf専用LocalStorage）
+
+### 9. デザイン・UI/UX
 - モダンでクリーンなデザイン
 - レスポンシブ対応（PC、タブレット、スマートフォン）
 - スムーズなスクロールアニメーション
@@ -449,6 +541,8 @@
 ├── mos.html               # MOS完全対策講座ページ ✨ NEW
 ├── webcreator.html        # Webクリエイター能力認定試験 スタンダード 完全対策講座ページ ✨ NEW
 ├── fe.html                # 基本情報技術者試験 完全対策講座ページ ✨ NEW
+├── gcp-cdl.html           # GCP Cloud Digital Leader 完全対策講座ページ ✨ NEW
+├── comptia-itf.html       # CompTIA ITF+ 完全対策講座ページ ✨ NEW
 ├── css/
 │   ├── style.css          # メインスタイルシート（共通）
 │   ├── ipass.css          # ITパスポート講座専用スタイル
@@ -457,7 +551,9 @@
 │   ├── mos.css            # MOS講座専用スタイル ✨ NEW
 │   ├── mos-addon.css      # MOS追加スタイル（バージョンカード、科目カードなど）✨ NEW
 │   ├── webcreator.css     # Webクリエイター講座専用スタイル ✨ NEW
-│   └── fe.css             # 基本情報技術者試験講座専用スタイル ✨ NEW
+│   ├── fe.css             # 基本情報技術者試験講座専用スタイル ✨ NEW
+│   ├── gcp-cdl.css        # GCP Cloud Digital Leader講座専用スタイル ✨ NEW
+│   └── comptia-itf.css    # CompTIA ITF+講座専用スタイル ✨ NEW
 ├── js/
 │   ├── common.js          # 共通JavaScript
 │   ├── ipass.js           # ITパスポート講座専用JavaScript
@@ -477,7 +573,13 @@
 │   ├── webcreator-progress.js # Webクリエイター学習進捗管理・ブックマーク機能 ✨ NEW
 │   ├── fe.js              # 基本情報技術者試験講座専用JavaScript ✨ NEW
 │   ├── fe-quiz.js         # 基本情報技術者試験練習問題機能（20問）✨ NEW
-│   └── fe-progress.js     # 基本情報技術者試験学習進捗管理・ブックマーク機能 ✨ NEW
+│   ├── fe-progress.js     # 基本情報技術者試験学習進捗管理・ブックマーク機能 ✨ NEW
+│   ├── gcp-cdl.js         # GCP Cloud Digital Leader講座専用JavaScript ✨ NEW
+│   ├── gcp-cdl-quiz.js    # GCP Cloud Digital Leader練習問題機能（20問）✨ NEW
+│   ├── gcp-cdl-progress.js # GCP Cloud Digital Leader学習進捗管理・ブックマーク機能 ✨ NEW
+│   ├── comptia-itf.js     # CompTIA ITF+講座専用JavaScript ✨ NEW
+│   ├── comptia-itf-quiz.js # CompTIA ITF+練習問題機能（20問）✨ NEW
+│   └── comptia-itf-progress.js # CompTIA ITF+学習進捗管理・ブックマーク機能 ✨ NEW
 └── README.md              # プロジェクト説明書
 ```
 
@@ -552,6 +654,28 @@
   - 科目A免除: `/fe.html#exemption`
   - 練習問題: `/fe.html#quiz`
   - 学習方法: `/fe.html#study`
+
+- **GCP Cloud Digital Leader 完全対策講座**: `/gcp-cdl.html` ✨ NEW
+  - 試験概要: `/gcp-cdl.html#overview`
+  - 出題範囲: `/gcp-cdl.html#scope`
+  - 合格基準: `/gcp-cdl.html#passing`
+  - 勉強時間: `/gcp-cdl.html#time`
+  - 分野別攻略法: `/gcp-cdl.html#strategy`
+  - 重要サービス: `/gcp-cdl.html#services`
+  - 練習問題: `/gcp-cdl.html#quiz`
+  - おすすめ教材: `/gcp-cdl.html#materials`
+  - 学習方法: `/gcp-cdl.html#study`
+
+- **CompTIA ITF+ 完全対策講座**: `/comptia-itf.html` ✨ NEW
+  - 試験概要: `/comptia-itf.html#overview`
+  - 出題範囲: `/comptia-itf.html#scope`
+  - 合格基準: `/comptia-itf.html#passing`
+  - 勉強時間: `/comptia-itf.html#time`
+  - 分野別攻略法: `/comptia-itf.html#strategy`
+  - 練習問題: `/comptia-itf.html#quiz`
+  - おすすめ教材: `/comptia-itf.html#materials`
+  - 学習方法: `/comptia-itf.html#study`
+  - 申し込み方法: `/comptia-itf.html#registration`
 
 ### 将来の講座ページ（未実装）
 - 応用情報技術者試験講座
@@ -666,7 +790,74 @@
 ## 📝 メンテナンス情報
 
 ### 更新履歴
-- **2025-01（最新）**: 基本情報技術者試験 完全対策講座追加！✨
+- **2025-12-27（最新）**: ファクトチェック実施・情報修正 ✅
+  - **GCP Cloud Digital Leader**:
+    - 出題範囲を最新版（2024年版）に更新: 4つの主要セクション（旧6セクションから変更）
+    - 合格基準を修正: Pass/Fail判定（具体的なスコアは非公開）に変更
+    - 有効期限を確認: 3年間（正確）
+  - **CompTIA ITF+**:
+    - 受験料を最新情報に更新: 約$135 USD（約18,000円）
+    - 各ドメインの配点比率を公式情報で確認（正確）
+    - 試験形式・合格スコア（650点/100-900点満点）を確認（正確）
+  - index.html、README.mdの情報を統一して修正
+
+- **2025-12-27**: CompTIA ITF+ 完全対策講座追加！✨
+  - 新規ページ `comptia-itf.html` を作成（全9セクション完成）
+  - 試験概要（試験番号FC0-U61、60分・最大75問、CBT方式）
+  - 受験料（通常11,160円、学割5,580円）
+  - 6つのドメイン詳細:
+    - ドメイン1: ITの概念と用語（17%）
+    - ドメイン2: インフラストラクチャ（22%）- 最大配点
+    - ドメイン3: アプリケーションとソフトウェア（18%）
+    - ドメイン4: ソフトウェア開発（12%）
+    - ドメイン5: データベースの基礎（11%）
+    - ドメイン6: セキュリティ（20%）
+  - 合格基準: 650点（100-900点満点）、約65%正答率
+  - レベル別勉強時間（IT初心者60-80時間、PC経験者40-60時間、実務経験者20-40時間）
+  - 2ヶ月学習スケジュール（Week 1-2基礎、Week 3-4応用、Week 5-6専門、Week 7-8総復習）
+  - 分野別攻略法（各ドメインの絶対暗記ポイントと攻略のコツ）
+  - 練習問題: 20問（6ドメイン均等配分）
+  - おすすめ教材（CompTIA公式サイト、Udemy、ExamCompass、Quizlet）
+  - 申し込み方法（ピアソンVUE、プロメトリック）
+  - 学習進捗管理機能（comptia-itf専用LocalStorage）
+  - ブックマーク機能（comptia-itf専用LocalStorage）
+  - トップページにCompTIA ITF+カードを追加（NEW!バッジ付き、CompTIAオレンジカラー）
+  - css/comptia-itf.css新規作成（CompTIAカラーグラデーション）
+  - js/comptia-itf.js、js/comptia-itf-quiz.js、js/comptia-itf-progress.js新規作成
+
+- **2025-12-27**: GCP Cloud Digital Leader 完全対策講座追加！✨
+  - 新規ページ `gcp-cdl.html` を作成（全9セクション完成）
+  - 試験概要、出題範囲（6セクション均等出題）、合格基準（約70%）
+  - レベル別勉強時間（IT初心者60～80時間、基礎知識あり40～60時間、クラウド経験者20～40時間）
+  - 2週間の学習スケジュール例
+  - 分野別攻略法（6セクション詳細）:
+    - デジタルトランスフォーメーション（約17%）
+    - データトランスフォーメーション（約16%）
+    - AI・MLによるイノベーション（約17%）
+    - インフラ・アプリのモダナイゼーション（約17%）
+    - 信頼とセキュリティ（約17%）
+    - クラウド運用のスケーリング（約17%）
+  - 重要サービス一覧（カテゴリ別）:
+    - コンピューティング（Compute Engine、GKE、Cloud Run、App Engine、Cloud Functions）
+    - ストレージ・データベース（Cloud Storage、Cloud SQL、Cloud Spanner、Cloud Bigtable、BigQuery、Firestore）
+    - AI・機械学習（Vision API、Natural Language API、Translation API、Vertex AI）
+    - ネットワーク・セキュリティ（VPC、Cloud Load Balancing、Cloud Armor、Cloud IAM、Cloud KMS）
+  - おすすめ教材セクション（公式リソース、オンラインコース、練習問題）
+  - 練習問題セクション: 20問（各セクションから均等出題）
+    - デジタルトランスフォーメーション: 4問
+    - データトランスフォーメーション: 3問
+    - AI・MLによるイノベーション: 3問
+    - インフラ・アプリのモダナイゼーション: 4問
+    - 信頼とセキュリティ: 3問
+    - クラウド運用のスケーリング: 3問
+  - 学習方法セクション（5ステップフロー、合格ポイント、避けるべき学習法）
+  - 学習進捗管理機能（gcp-cdl専用LocalStorage）
+  - ブックマーク機能（gcp-cdl専用LocalStorage）
+  - トップページにGCP Cloud Digital Leaderカードを追加（NEW!バッジ付き）
+  - css/gcp-cdl.css新規作成（Googleカラーグラデーション）
+  - js/gcp-cdl.js、js/gcp-cdl-quiz.js、js/gcp-cdl-progress.js新規作成
+
+- **2025-01**: 基本情報技術者試験 完全対策講座追加！✨
   - 新規ページ `fe.html` を作成（全12セクション完成）
   - 試験概要、制度変更点（2023年4月～）、出題範囲（科目A・B）
   - 合格率・難易度（令和6年度: 40.8%）

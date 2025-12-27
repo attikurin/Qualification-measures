@@ -1,6 +1,355 @@
 /* ========================================
-   基本情報技術者試験講座専用スタイル
+   CompTIA ITF+講座専用スタイル
 ======================================== */
+
+/* ========================================
+   出題範囲カード
+======================================== */
+.domain-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.domain-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.domain-card.domain-1 { border-top-color: #3b82f6; }
+.domain-card.domain-2 { border-top-color: #10b981; }
+.domain-card.domain-3 { border-top-color: #f59e0b; }
+.domain-card.domain-4 { border-top-color: #8b5cf6; }
+.domain-card.domain-5 { border-top-color: #ec4899; }
+.domain-card.domain-6 { border-top-color: #14b8a6; }
+
+.domain-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.domain-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.domain-card.domain-1 .domain-number { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.domain-card.domain-2 .domain-number { background: linear-gradient(135deg, #10b981, #059669); }
+.domain-card.domain-3 .domain-number { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.domain-card.domain-4 .domain-number { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.domain-card.domain-5 .domain-number { background: linear-gradient(135deg, #ec4899, #db2777); }
+.domain-card.domain-6 .domain-number { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+
+.domain-title-area {
+    flex: 1;
+}
+
+.domain-title-area h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.domain-percentage {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.domain-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.domain-topics li {
+    padding: 0.6rem 0 0.6rem 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.domain-topics li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ========================================
+   機能・特徴グリッド
+======================================== */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+}
+
+.feature-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========================================
+   学習時間カード
+======================================== */
+.schedule-table {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 2rem 0 3rem;
+    overflow-x: auto;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table th {
+    background: rgba(37, 99, 235, 0.05);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.schedule-table tr:hover {
+    background: rgba(37, 99, 235, 0.02);
+}
+
+/* ========================================
+   戦略セクション
+======================================== */
+.strategy-section {
+    margin: 2rem 0 3rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.strategy-section h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.strategy-section h4 i {
+    color: var(--primary-color);
+}
+
+.strategy-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strategy-points li {
+    padding: 0.8rem 0 0.8rem 2rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.strategy-points li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.strategy-points li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ========================================
+   教材グリッド
+======================================== */
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+}
+
+.material-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.material-card h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.material-type {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.material-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.material-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.material-link:hover {
+    gap: 0.8rem;
+}
+
+/* ========================================
+   フローステップ
+======================================== */
+.flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.flow-step {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.flow-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.flow-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.flow-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+}
 
 /* ========================================
    練習問題スタイル
@@ -86,6 +435,23 @@
 .reset-btn:hover {
     background: #b91c1c;
     transform: translateY(-2px);
+}
+
+.quiz-stats-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-stats-display .stat-box:last-child {
+    grid-column: 1 / -1;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .quiz-list {
@@ -254,6 +620,33 @@
 
 .quiz-feedback.correct .feedback-result {
     color: #10b981;
+}
+
+.quiz-explanation {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    background: rgba(37, 99, 235, 0.05);
+    border: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+.explanation-content {
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.explanation-content strong {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.explanation-content p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 .quiz-feedback.incorrect .feedback-result {
@@ -654,7 +1047,7 @@
    ページヒーロー
 ======================================== */
 .page-hero {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #f77f00 50%, #fcbf49 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
